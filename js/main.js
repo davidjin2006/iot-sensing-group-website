@@ -1,263 +1,33 @@
 document.documentElement.classList.add("js");
 
-// Hero 轮播 - 简化版
-(function initHeroSlider() {
-  const slides = document.querySelectorAll(".hero-slide");
-  const indicators = document.querySelectorAll(".hero-indicator");
-  const prevBtn = document.querySelector(".hero-nav-prev");
-  const nextBtn = document.querySelector(".hero-nav-next");
-  if (slides.length === 0) return;
-
-  let currentIndex = 0;
-  let autoplayTimer = null;
-  const autoplayDelay = 3200;
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function syncSlideState() {
-    slides.forEach((slide, index) => {
-      const isActive = index === currentIndex;
-      slide.classList.toggle("hero-slide-active", isActive);
-      slide.setAttribute("aria-hidden", isActive ? "false" : "true");
-    });
-
-    indicators.forEach((indicator, index) => {
-      const isActive = index === currentIndex;
-      indicator.classList.toggle("hero-indicator-active", isActive);
-      indicator.setAttribute("aria-current", isActive ? "true" : "false");
-    });
-  }
-
-  function goToSlide(index) {
-    const nextIndex = (index + slides.length) % slides.length;
-    if (nextIndex === currentIndex) return;
-
-    currentIndex = (index + slides.length) % slides.length;
-    syncSlideState();
-  }
-
-  function nextSlide() {
-    goToSlide(currentIndex + 1);
-  }
-
-  function prevSlide() {
-    goToSlide(currentIndex - 1);
-  }
-
-  function startAutoplay() {
-    if (reduceMotion) return;
-    stopAutoplay();
-    autoplayTimer = setInterval(nextSlide, autoplayDelay);
-  }
-
-  function stopAutoplay() {
-    if (autoplayTimer) {
-      clearInterval(autoplayTimer);
-      autoplayTimer = null;
-    }
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      prevSlide();
-      startAutoplay();
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      nextSlide();
-      startAutoplay();
-    });
-  }
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => {
-      goToSlide(index);
-      startAutoplay();
-    });
-  });
-
-  const heroSection = document.querySelector(".hero");
-  if (heroSection) {
-    heroSection.addEventListener("mouseenter", stopAutoplay);
-    heroSection.addEventListener("mouseleave", startAutoplay);
-  }
-
-  syncSlideState();
-  startAutoplay();
-})();
-
-// Hero 鼠标视差效果
-(function initHeroParallax() {
-  const hero = document.querySelector(".hero");
-  if (!hero) return;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  if (!window.matchMedia("(hover: hover)").matches) return;
-
-  let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
-
-  hero.addEventListener("mousemove", (e) => {
-    const rect = hero.getBoundingClientRect();
-    targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-    targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-  });
-
-  hero.addEventListener("mouseleave", () => {
-    targetX = 0;
-    targetY = 0;
-  });
-
-  function animateParallax() {
-    currentX += (targetX - currentX) * 0.06;
-    currentY += (targetY - currentY) * 0.06;
-
-    const activeContent = document.querySelector(".hero-slide-active .hero-content");
-    const activeIndex = document.querySelector(".hero-slide-active .hero-index");
-
-    if (activeContent) {
-      activeContent.style.transform = `translate(${currentX * 8}px, ${currentY * 8}px)`;
-    }
-    if (activeIndex) {
-      activeIndex.style.transform = `translate(${currentX * -14}px, ${currentY * -14}px)`;
-    }
-
-    requestAnimationFrame(animateParallax);
-  }
-
-  animateParallax();
-})();
-
-// 大面积 section 3D 视差（block-panel 全区域跟随鼠标微妙倾斜）
-(function initBlockPanelParallax() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  if (!window.matchMedia("(hover: hover)").matches) return;
-
-  const panels = document.querySelectorAll(".block-panel");
-
-  panels.forEach((panel) => {
-    const visual = panel.querySelector(".block-panel-visual");
-    const text = panel.querySelector(".block-panel-text");
-    if (!visual && !text) return;
-
-    panel.addEventListener("mousemove", (e) => {
-      const rect = panel.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-      if (visual) {
-        visual.style.transform = `translate3d(${x * 20}px, ${y * 20}px, 0) rotateY(${x * 6}deg) rotateX(${-y * 6}deg)`;
-      }
-      if (text) {
-        text.style.transform = `translate3d(${x * -10}px, ${y * -10}px, 0)`;
-      }
-    });
-
-    panel.addEventListener("mouseleave", () => {
-      if (visual) visual.style.transform = "";
-      if (text) text.style.transform = "";
-    });
-  });
-})();
-
-// Hero 粒子网络背景
-(function initHeroNetwork() {
-  const canvas = document.getElementById("hero-network");
-  if (!canvas) return;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  const ctx = canvas.getContext("2d");
-  let width, height;
-  const particles = [];
-  const particleCount = 60;
-  const maxDistance = 120;
-
-  function resize() {
-    width = canvas.width = canvas.offsetWidth;
-    height = canvas.height = canvas.offsetHeight;
-  }
-
-  class Particle {
-    constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.5;
-      this.vy = (Math.random() - 0.5) * 0.5;
-      this.radius = Math.random() * 2 + 1;
-    }
-
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-
-      if (this.x < 0 || this.x > width) this.vx *= -1;
-      if (this.y < 0 || this.y > height) this.vy *= -1;
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(23, 63, 103, 0.6)";
-      ctx.fill();
-    }
-  }
-
-  function init() {
-    resize();
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
-    }
-  }
-
-  function connectParticles() {
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < maxDistance) {
-          const opacity = (1 - distance / maxDistance) * 0.3;
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(37, 99, 235, ${opacity})`;
-          ctx.lineWidth = 0.5;
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, width, height);
-    
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-
-    connectParticles();
-    requestAnimationFrame(animate);
-  }
-
-  window.addEventListener("resize", resize);
-  init();
-  animate();
-})();
+/* ============================================================
+   MICS — main.js
+   功能：Mobile Nav / Active Nav / Device Gallery / Reveal / Year
+   ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
+  const siteHeader = document.querySelector(".site-header");
   const navToggle = document.querySelector(".nav-toggle");
   const primaryNav = document.querySelector(".primary-nav");
   const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
-  const sections = navLinks
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
+  const sections = navLinks.map((l) => document.querySelector(l.getAttribute("href"))).filter(Boolean);
   const yearElement = document.querySelector("#current-year");
+  const isEnglish = document.documentElement.lang === "en";
+  const openMenuLabel = isEnglish ? "Open navigation menu" : "打开导航菜单";
+  const closeMenuLabel = isEnglish ? "Close navigation menu" : "关闭导航菜单";
 
+  /* ---- Header scroll state ---- */
+  if (siteHeader) {
+    const updateHeaderState = () => siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+    updateHeaderState();
+  }
+
+  /* ---- Mobile navigation ---- */
   const closeNavigation = () => {
     if (!navToggle) return;
     navToggle.setAttribute("aria-expanded", "false");
-    navToggle.querySelector(".sr-only").textContent = "打开导航菜单";
+    navToggle.querySelector(".sr-only").textContent = openMenuLabel;
     document.body.classList.remove("nav-open");
   };
 
@@ -265,150 +35,292 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.addEventListener("click", () => {
       const isOpen = navToggle.getAttribute("aria-expanded") === "true";
       navToggle.setAttribute("aria-expanded", String(!isOpen));
-      navToggle.querySelector(".sr-only").textContent = isOpen ? "打开导航菜单" : "关闭导航菜单";
+      navToggle.querySelector(".sr-only").textContent = isOpen ? openMenuLabel : closeMenuLabel;
       document.body.classList.toggle("nav-open", !isOpen);
     });
-
     navLinks.forEach((link) => link.addEventListener("click", closeNavigation));
-
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeNavigation();
-        navToggle.focus();
-      }
+      if (event.key === "Escape") { closeNavigation(); navToggle.focus(); }
     });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 820) closeNavigation();
-    });
+    window.addEventListener("resize", () => { if (window.innerWidth > 900) closeNavigation(); });
   }
 
+  /* ---- Active anchor highlight ---- */
   if ("IntersectionObserver" in window && sections.length > 0) {
     const sectionObserver = new IntersectionObserver(
       (entries) => {
         const visibleSection = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
         if (!visibleSection) return;
-
         navLinks.forEach((link) => {
           const isCurrent = link.getAttribute("href") === `#${visibleSection.target.id}`;
-          if (isCurrent) {
-            link.setAttribute("aria-current", "location");
-          } else {
-            link.removeAttribute("aria-current");
-          }
+          if (isCurrent) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
         });
       },
       { rootMargin: "-25% 0px -60%", threshold: [0, 0.15, 0.4] }
     );
-
     sections.forEach((section) => sectionObserver.observe(section));
   }
 
-  if (yearElement) {
-    yearElement.textContent = String(new Date().getFullYear());
-  }
+  /* ---- Year ---- */
+  if (yearElement) yearElement.textContent = String(new Date().getFullYear());
 
-  // 滚动进入动画
+  /* ---- Device gallery ---- */
+  safelyInitialize(initDeviceGallery);
+
+  /* ---- Scroll reveal ---- */
   if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const fadeElements = document.querySelectorAll(".fade-in-up");
-    document.documentElement.classList.add("reveal-enabled");
-    
     const fadeObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const element = entry.target;
-            
-            // 处理 stagger 效果
-            if (element.hasAttribute("data-stagger")) {
-              const children = element.children;
-              Array.from(children).forEach((child, index) => {
-                child.style.setProperty("--fade-delay", `${index * 80}ms`);
-                child.classList.add("fade-in-up");
-                setTimeout(() => child.classList.add("is-visible"), 10);
-              });
-            } else {
-              element.classList.add("is-visible");
-            }
-            
-            fadeObserver.unobserve(element);
+            entry.target.classList.add("is-visible");
+            fadeObserver.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
     );
-
+    document.documentElement.classList.add("reveal-enabled");
     fadeElements.forEach((el) => fadeObserver.observe(el));
   }
 
-  // 研究方向卡片 3D 倾斜跟随鼠标
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && window.matchMedia("(hover: hover)").matches) {
-    const tiltCards = document.querySelectorAll(".research-item");
-
-    tiltCards.forEach((card) => {
-      card.addEventListener("mousemove", (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -6;
-        const rotateY = ((x - centerX) / centerX) * 6;
-
-        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-      });
-
-      card.addEventListener("mouseleave", () => {
-        card.style.transform = "";
-      });
-    });
-  }
+  /* ---- Platform side reveal ---- */
+  safelyInitialize(initPlatformReveals);
 });
 
-// 背景视差速度差（背景比前景慢）- 优化版，带节流
-(function initParallaxScroll() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+function safelyInitialize(initializer) {
+  try {
+    initializer();
+  } catch (error) {
+    document.documentElement.classList.remove("reveal-enabled");
+    console.error(`[MICS] ${initializer.name} failed.`, error);
+  }
+}
 
-  const parallaxSections = document.querySelectorAll(".hero, .block-panel-dark");
-  if (parallaxSections.length === 0) return;
+function initPlatformReveals() {
+  const features = document.querySelectorAll(".platform-reveal");
+  if (
+    features.length === 0 ||
+    !("IntersectionObserver" in window) ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) return;
 
-  let ticking = false;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+  );
 
-  function updateParallax() {
-    parallaxSections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      const scrollProgress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-      
-      if (scrollProgress >= 0 && scrollProgress <= 1) {
-        const parallaxOffset = (scrollProgress - 0.5) * 100;
-        
-        // Hero canvas 背景视差
-        const canvas = section.querySelector(".hero-canvas");
-        if (canvas) {
-          canvas.style.transform = `translate3d(0, ${parallaxOffset * 0.3}px, 0)`;
-        }
-        
-        // Block panel 背景视差（如果有装饰元素）
-        const visual = section.querySelector(".block-panel-visual");
-        if (visual) {
-          visual.style.transform = `translate3d(0, ${parallaxOffset * 0.2}px, 0)`;
-        }
-      }
-    });
-    
-    ticking = false;
+  features.forEach((feature) => observer.observe(feature));
+}
+
+/* ============================================================
+   Device Gallery
+   水平轨道 + Pointer Drag + Touch Swipe + Snap + Autoplay + Loop
+   ============================================================ */
+function initDeviceGallery() {
+  const viewport = document.querySelector("[data-device-showcase]");
+  if (!viewport) return;
+
+  const track = viewport.querySelector("[data-device-track]");
+  if (!track) return;
+  const slides = [...track.querySelectorAll(".hero-device-slide")];
+  const frame = viewport.closest(".hero-platform-frame");
+  if (!frame) return;
+  const captionIndex = frame.querySelector("[data-device-caption-index]");
+  const captionName = frame.querySelector("[data-device-caption-name]");
+  const captionSub = frame.querySelector("[data-device-caption-sub]");
+  const indexLabel = frame.querySelector(".hero-device-index");
+  const prevBtn = frame.querySelector("[data-device-prev]");
+  const nextBtn = frame.querySelector("[data-device-next]");
+
+  const realCount = 3; // 真实设备数量（不含 clone）
+  if (slides.length < realCount + 2) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const AUTOPLAY_MS = 5200;
+  const RESUME_DELAY_MS = 2000;
+  const SNAP_MS = 520;
+
+  let realIndex = 0;
+  let autoplayTimer = null;
+  let resumeTimer = null;
+  let isPointerPaused = false;
+  let isDragging = false;
+  let dragStartX = 0;
+  let dragStartY = 0;
+  let dragStartTime = 0;
+  let dragDeltaX = 0;
+  let dragMoved = false;
+
+  const pad = (n) => String(n + 1).padStart(2, "0");
+  const padTotal = (n) => String(n).padStart(2, "0");
+
+  // track: [clone(03), 01, 02, 03, clone(01)]
+  const positionFor = (realIdx) => -(realIdx + 1) * 100;
+
+  function setTransform(percent, animate) {
+    track.classList.toggle("is-animating", animate);
+    track.style.transform = `translate3d(${percent}%, 0, 0)`;
   }
 
-  function requestTick() {
-    if (!ticking) {
-      requestAnimationFrame(updateParallax);
-      ticking = true;
+  function updateCaption() {
+    const slide = slides[realIndex + 1];
+    if (captionIndex) captionIndex.textContent = pad(realIndex);
+    if (captionName) captionName.textContent = slide.dataset.deviceName || "";
+    if (captionSub) captionSub.textContent = slide.dataset.deviceSub || "";
+    if (indexLabel) indexLabel.textContent = `${pad(realIndex)} / ${padTotal(realCount)}`;
+    slides.forEach((s, i) => s.setAttribute("aria-hidden", String(i !== realIndex + 1)));
+  }
+
+  function goTo(nextIndex, animate = true) {
+    if (nextIndex < 0 || nextIndex >= realCount) return;
+    realIndex = nextIndex;
+    setTransform(positionFor(realIndex), animate);
+    updateCaption();
+  }
+
+  function next() {
+    if (realIndex === realCount - 1) {
+      setTransform(positionFor(realCount), true); // slide into clone(01)
+      window.setTimeout(() => {
+        track.classList.remove("is-animating");
+        track.style.transform = `translate3d(${positionFor(0)}%, 0, 0)`;
+        realIndex = 0;
+        updateCaption();
+      }, SNAP_MS);
+    } else {
+      goTo(realIndex + 1);
     }
   }
 
-  window.addEventListener("scroll", requestTick, { passive: true });
-  updateParallax(); // 初始化
-})();
+  function prev() {
+    if (realIndex === 0) {
+      setTransform(0, true); // slide into clone(03)
+      window.setTimeout(() => {
+        track.classList.remove("is-animating");
+        track.style.transform = `translate3d(${positionFor(realCount - 1)}%, 0, 0)`;
+        realIndex = realCount - 1;
+        updateCaption();
+      }, SNAP_MS);
+    } else {
+      goTo(realIndex - 1);
+    }
+  }
+
+  function stopAutoplay() {
+    window.clearInterval(autoplayTimer);
+    autoplayTimer = null;
+  }
+
+  function startAutoplay() {
+    if (prefersReducedMotion || document.hidden || isPointerPaused || isDragging || autoplayTimer) return;
+    autoplayTimer = window.setInterval(next, AUTOPLAY_MS);
+  }
+
+  function pauseForPointer() {
+    isPointerPaused = true;
+    stopAutoplay();
+  }
+
+  function resumeForPointer() {
+    isPointerPaused = false;
+    window.clearTimeout(resumeTimer);
+    resumeTimer = window.setTimeout(startAutoplay, RESUME_DELAY_MS);
+  }
+
+  /* ---- Pointer drag / touch swipe ---- */
+  function onPointerDown(e) {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    isDragging = true;
+    dragMoved = false;
+    dragStartX = e.clientX;
+    dragStartY = e.clientY;
+    dragStartTime = performance.now();
+    dragDeltaX = 0;
+    stopAutoplay();
+    track.classList.remove("is-animating");
+    viewport.setPointerCapture(e.pointerId);
+    viewport.classList.add("is-dragging");
+  }
+
+  function onPointerMove(e) {
+    if (!isDragging) return;
+    const dx = e.clientX - dragStartX;
+    const dy = e.clientY - dragStartY;
+    if (!dragMoved && Math.abs(dx) < 4 && Math.abs(dy) < 4) return;
+    if (!dragMoved && Math.abs(dy) > Math.abs(dx)) {
+      // vertical scroll intent — release
+      isDragging = false;
+      viewport.classList.remove("is-dragging");
+      if (viewport.hasPointerCapture(e.pointerId)) viewport.releasePointerCapture(e.pointerId);
+      resumeForPointer();
+      return;
+    }
+    dragMoved = true;
+    dragDeltaX = dx;
+    const pxPerPercent = viewport.offsetWidth / 100;
+    setTransform(positionFor(realIndex) + dx / pxPerPercent, false);
+  }
+
+  function onPointerUp(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    viewport.classList.remove("is-dragging");
+    if (viewport.hasPointerCapture(e.pointerId)) viewport.releasePointerCapture(e.pointerId);
+
+    const width = viewport.offsetWidth;
+    const dt = performance.now() - dragStartTime;
+    const velocity = dt > 0 ? dragDeltaX / dt : 0;
+    const threshold = width * 0.18;
+
+    if (dragDeltaX < -threshold || velocity < -0.5) next();
+    else if (dragDeltaX > threshold || velocity > 0.5) prev();
+    else goTo(realIndex, true); // snap back
+
+    resumeForPointer();
+  }
+
+  viewport.addEventListener("pointerdown", onPointerDown);
+  viewport.addEventListener("pointermove", onPointerMove);
+  viewport.addEventListener("pointerup", onPointerUp);
+  viewport.addEventListener("pointercancel", onPointerUp);
+  viewport.addEventListener("dragstart", (e) => e.preventDefault());
+
+  if (prevBtn) prevBtn.addEventListener("click", () => { pauseForPointer(); prev(); resumeForPointer(); });
+  if (nextBtn) nextBtn.addEventListener("click", () => { pauseForPointer(); next(); resumeForPointer(); });
+
+  /* ---- Keyboard ---- */
+  viewport.setAttribute("tabindex", "0");
+  viewport.setAttribute("role", "region");
+  viewport.setAttribute(
+    "aria-label",
+    document.documentElement.lang === "en" ? "Research platform device gallery" : "实验平台设备展示"
+  );
+  viewport.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") { e.preventDefault(); pauseForPointer(); next(); resumeForPointer(); }
+    else if (e.key === "ArrowLeft") { e.preventDefault(); pauseForPointer(); prev(); resumeForPointer(); }
+  });
+
+  /* ---- Hover pause ---- */
+  viewport.addEventListener("mouseenter", pauseForPointer);
+  viewport.addEventListener("mouseleave", resumeForPointer);
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopAutoplay();
+    else startAutoplay();
+  });
+
+  /* ---- Init ---- */
+  goTo(0, false);
+  startAutoplay();
+}
