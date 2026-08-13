@@ -11,19 +11,16 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
   </head>
-  <body>
+  <body class="page-shell page-platform">
     <a class="skip-link" href="#main-content">跳转到主要内容</a>
 
     <header class="site-header" id="top">
       <div class="header-inner container">
-        <a class="site-brand" href="index.html?lang=cn" aria-label="多模态智能通信与感知首页">
-          <span class="brand-mark" aria-hidden="true"><img src="assets/images/mics-logo.png" alt=""></span>
+                <a class="site-brand" href="index.html" aria-label="MICS 首页">
+          <span class="brand-mark" aria-hidden="true"><img src="assets/images/mics-logo.png" alt="" width="64" height="64"></span>
           <span class="brand-text">
-            <strong>多模态智能通信与感知</strong>
-            <small>
-              <span>Multimodal Intelligent Communication and Sensing</span>
-              <span>南京邮电大学 · 计算机学院</span>
-            </small>
+            <strong>MICS</strong>
+            <small>多模态智能通信与感知</small>
           </span>
         </a>
 
@@ -34,15 +31,12 @@
           <span aria-hidden="true"></span>
         </button>
 
-        <nav class="primary-nav" id="primary-navigation" aria-label="主要导航">
-          <a href="index.html?lang=cn#about">课题组介绍</a>
-          <a href="index.html?lang=cn#leader">导师介绍</a>
-          <a href="index.html?lang=cn#research">研究方向</a>
-          <a href="index.html?lang=cn#team">团队成员</a>
-          <a href="index.html?lang=cn#publications">学术成果</a>
-          <a href="index.html?lang=cn#join">本科生招新</a>
-          <a href="index.html?lang=cn#partners">合作单位</a>
-          <a href="index.html?lang=cn#contact">联系方式</a>
+                <nav class="primary-nav" id="primary-navigation" aria-label="主要导航">
+          <a href="index.html#research">研究方向</a>
+          <a href="platform.html">实验平台</a>
+          <a href="team.html">团队成员</a>
+          <a href="results.html">学术成果</a>
+          <a href="join.html">本科生招新</a>
           <span class="language-switch" aria-label="语言切换"><a href="en/platform.html" lang="en">EN</a><span aria-current="true">CN</span></span>
         </nav>
       </div>
@@ -52,7 +46,7 @@
       <section class="detail-hero platform-hero">
         <div class="container platform-hero-grid">
           <div>
-            <a href="index.html?lang=cn#home" class="detail-back">← 返回首页</a>
+            <a href="index.html#home" class="detail-back">← 返回首页</a>
             <p class="block-eyebrow">Sensing Platform</p>
             <h1 class="detail-title">多模态感知平台</h1>
             <p class="detail-lead">平台围绕 WiFi CSI、BFI 波束成形反馈信息、毫米波雷达与移动机器人系统，支撑从生理状态、动作行为到动态多传感器融合的实验验证。</p>
@@ -72,7 +66,9 @@
         </div>
       </section>
 
-      <section class="section fade-in-up">
+      <nav class="subpage-index" aria-label="本页导航"><div class="container subpage-index-inner"><span>本页内容</span><div class="subpage-index-links"><a href="#platform-matrix">平台矩阵</a><a href="#wifi-csi">WiFi CSI</a><a href="#bfi">BFI</a><a href="#mmwave">毫米波</a><a href="#mobile">移动平台</a><a href="#applications">研究场景</a></div></div></nav>
+
+      <section class="section fade-in-up" id="platform-matrix">
         <div class="container">
           <div class="section-heading section-heading-wide">
             <div>
@@ -118,8 +114,8 @@
         </div>
       </section>
 
-      <section class="section section-tinted fade-in-up">
-        <div class="container platform-feature">
+      <section class="section platform-feature-section platform-feature-section-right" id="wifi-csi">
+        <div class="container platform-feature platform-reveal">
           <figure class="platform-feature-media">
             <img src="assets/images/platform/wifi-csi-intel5300.png" alt="Intel 5300 WiFi CSI 采集设备结构图" width="1274" height="638">
           </figure>
@@ -136,8 +132,8 @@
         </div>
       </section>
 
-      <section class="section fade-in-up">
-        <div class="container platform-feature platform-feature-reverse">
+      <section class="section platform-feature-section platform-feature-section-left" id="bfi">
+        <div class="container platform-feature platform-feature-reverse platform-reveal">
           <figure class="platform-feature-media">
             <img src="assets/images/platform/bfi-capture-r7800-r9000.jpeg" alt="BFI 采集实验中的路由器、嗅探设备和接收电脑" width="3301" height="2476">
           </figure>
@@ -168,8 +164,8 @@
         </div>
       </section>
 
-      <section class="section section-tinted fade-in-up">
-        <div class="container platform-feature">
+      <section class="section platform-feature-section platform-feature-section-right" id="mmwave">
+        <div class="container platform-feature platform-reveal">
           <figure class="platform-feature-media platform-feature-media-portrait">
             <img src="assets/images/platform/mmwave-awr1843.png" alt="TI AWR1843 毫米波雷达采集设备" width="224" height="168">
           </figure>
@@ -186,8 +182,8 @@
         </div>
       </section>
 
-      <section class="section fade-in-up">
-        <div class="container platform-feature platform-feature-reverse">
+      <section class="section platform-feature-section platform-feature-section-left" id="mobile">
+        <div class="container platform-feature platform-feature-reverse platform-reveal">
           <figure class="platform-feature-media platform-feature-media-portrait">
             <img src="assets/images/platform/turtlebot4-platform.jpeg" alt="TurtleBot4 移动机器人平台照片" width="1196" height="920">
           </figure>
@@ -204,7 +200,7 @@
         </div>
       </section>
 
-      <section class="section section-tinted fade-in-up">
+      <section class="section fade-in-up" id="applications">
         <div class="container">
           <div class="section-heading section-heading-wide">
             <div>
@@ -221,6 +217,7 @@
           </div>
         </div>
       </section>
+      <section class="page-end-navigation" aria-labelledby="platform-next-title"><div class="container page-end-navigation-inner"><p class="page-end-label" id="platform-next-title">继续浏览</p><div class="page-end-links"><a href="index.html#research"><span>研究方向</span><span aria-hidden="true">→</span></a><a href="results.html"><span>学术成果</span><span aria-hidden="true">→</span></a></div></div></section>
     </main>
 
     <footer class="site-footer">

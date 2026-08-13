@@ -11,19 +11,16 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
   </head>
-  <body>
+  <body class="page-shell page-join">
     <a class="skip-link" href="#main-content">跳转到主要内容</a>
 
     <header class="site-header" id="top">
       <div class="header-inner container">
-        <a class="site-brand" href="index.html" aria-label="多模态智能通信与感知首页">
-          <span class="brand-mark" aria-hidden="true"><img src="assets/images/mics-logo.png" alt=""></span>
+                <a class="site-brand" href="index.html" aria-label="MICS 首页">
+          <span class="brand-mark" aria-hidden="true"><img src="assets/images/mics-logo.png" alt="" width="64" height="64"></span>
           <span class="brand-text">
-            <strong>多模态智能通信与感知</strong>
-            <small>
-              <span>Multimodal Intelligent Communication and Sensing</span>
-              <span>南京邮电大学 · 计算机学院</span>
-            </small>
+            <strong>MICS</strong>
+            <small>多模态智能通信与感知</small>
           </span>
         </a>
 
@@ -34,15 +31,12 @@
           <span aria-hidden="true"></span>
         </button>
 
-        <nav class="primary-nav" id="primary-navigation" aria-label="主要导航">
-          <a href="index.html#about">课题组介绍</a>
-          <a href="index.html#leader">导师介绍</a>
+                <nav class="primary-nav" id="primary-navigation" aria-label="主要导航">
           <a href="index.html#research">研究方向</a>
-          <a href="index.html#team">团队成员</a>
-          <a href="index.html#publications">学术成果</a>
-          <a href="index.html#join">本科生招新</a>
-          <a href="index.html#partners">合作单位</a>
-          <a href="index.html#contact">联系方式</a>
+          <a href="platform.html">实验平台</a>
+          <a href="team.html">团队成员</a>
+          <a href="results.html">学术成果</a>
+          <a href="join.html">本科生招新</a>
           <span class="language-switch" aria-label="语言切换"><a href="en/join.html" lang="en">EN</a><span aria-current="true">CN</span></span>
         </nav>
       </div>
@@ -58,14 +52,18 @@
         </div>
       </section>
 
-      <section class="section fade-in-up">
+      <nav class="subpage-index" aria-label="本页导航"><div class="container subpage-index-inner"><span>本页内容</span><div class="subpage-index-links"><a href="#overview">招新说明</a><a href="#opportunities">开放题目</a><a href="#contact">联系方式</a></div></div></nav>
+
+      <section class="section fade-in-up" id="overview">
         <div class="container">
           <div class="section-heading">
             <p class="section-number">Overview</p>
             <h2>招新说明</h2>
           </div>
-          <div class="placeholder-block">
-            <p class="placeholder-text">招新流程、申请方式与截止时间待补充</p>
+          <div class="content-status-surface">
+            <p class="status-label">Recruitment Status</p>
+            <h3>正式招新安排待公布</h3>
+            <p>具体研究题目、申请流程与截止时间将在信息确认后更新。</p>
           </div>
         </div>
       </section>
@@ -77,55 +75,7 @@
             <h2>研究题目</h2>
           </div>
 
-          <div class="opportunity-list">
-            <article class="opportunity-item">
-              <header>
-                <p class="item-index">题目 01</p>
-                <span class="status status-pending">内容待公布</span>
-              </header>
-              <h3>待补充</h3>
-              <dl>
-                <div><dt>研究方向</dt><dd>待补充</dd></div>
-                <div><dt>题目简介</dt><dd>待补充</dd></div>
-                <div><dt>主要工作</dt><dd>待补充</dd></div>
-                <div><dt>基础要求</dt><dd>待补充</dd></div>
-                <div><dt>指导教师</dt><dd>左益平</dd></div>
-                <div><dt>状态</dt><dd>内容待公布</dd></div>
-              </dl>
-            </article>
-            <article class="opportunity-item">
-              <header>
-                <p class="item-index">题目 02</p>
-                <span class="status status-pending">内容待公布</span>
-              </header>
-              <h3>待补充</h3>
-              <dl>
-                <div><dt>研究方向</dt><dd>待补充</dd></div>
-                <div><dt>题目简介</dt><dd>待补充</dd></div>
-                <div><dt>主要工作</dt><dd>待补充</dd></div>
-                <div><dt>基础要求</dt><dd>待补充</dd></div>
-                <div><dt>指导教师</dt><dd>左益平</dd></div>
-                <div><dt>状态</dt><dd>内容待公布</dd></div>
-              </dl>
-            </article>
-            <article class="opportunity-item">
-              <header>
-                <p class="item-index">题目 03</p>
-                <span class="status status-pending">内容待公布</span>
-              </header>
-              <h3>待补充</h3>
-              <dl>
-                <div><dt>研究方向</dt><dd>待补充</dd></div>
-                <div><dt>题目简介</dt><dd>待补充</dd></div>
-                <div><dt>主要工作</dt><dd>待补充</dd></div>
-                <div><dt>基础要求</dt><dd>待补充</dd></div>
-                <div><dt>指导教师</dt><dd>左益平</dd></div>
-                <div><dt>状态</dt><dd>内容待公布</dd></div>
-              </dl>
-            </article>
-          </div>
-
-          <p class="status-guide"><strong>状态说明：</strong>后续发布题目时，可将状态设置为"开放"或"暂停"。</p>
+          <div class="content-status-surface recruitment-status-surface"><p class="status-label">Open Topics</p><h3>科研题目正在整理</h3><p>当前尚未公布正式题目。题目名称、研究方向、主要工作与基础要求将在确认后发布。</p><dl class="known-information-list"><div><dt>指导教师</dt><dd>左益平</dd></div><div><dt>当前状态</dt><dd><span class="status status-pending">内容待公布</span></dd></div></dl></div>
         </div>
       </section>
 
@@ -142,7 +92,7 @@
             </div>
             <div>
               <span>Email</span>
-              <strong>待补充</strong>
+              <strong><a href="mailto:zuoyiping@njupt.edu.cn">zuoyiping@njupt.edu.cn</a></strong>
             </div>
             <div>
               <span>所属单位</span>
@@ -151,6 +101,7 @@
           </address>
         </div>
       </section>
+      <section class="page-end-navigation" aria-labelledby="join-next-title"><div class="container page-end-navigation-inner"><p class="page-end-label" id="join-next-title">继续浏览</p><div class="page-end-links"><a href="index.html"><span>返回首页</span><span aria-hidden="true">→</span></a><a href="index.html#contact"><span>首页联系方式</span><span aria-hidden="true">→</span></a></div></div></section>
     </main>
 
     <footer class="site-footer">

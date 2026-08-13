@@ -10,19 +10,16 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/main.js" defer></script>
   </head>
-  <body>
+  <body class="page-shell page-research">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header class="site-header" id="top">
       <div class="header-inner container">
-        <a class="site-brand" href="index.html" aria-label="Multimodal Intelligent Communication and Sensing home">
-          <span class="brand-mark" aria-hidden="true"><img src="../assets/images/mics-logo.png" alt=""></span>
+                <a class="site-brand" href="index.html" aria-label="MICS home">
+          <span class="brand-mark" aria-hidden="true"><img src="../assets/images/mics-logo.png" alt="" width="64" height="64"></span>
           <span class="brand-text">
-            <strong>Multimodal Intelligent Communication and Sensing</strong>
-            <small>
-              <span>Nanjing University of Posts and Telecommunications</span>
-              <span>School of Computer Science</span>
-            </small>
+            <strong>MICS</strong>
+            <small>Multimodal Intelligent Communication and Sensing</small>
           </span>
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
@@ -31,154 +28,95 @@
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </button>
-        <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
-          <a href="index.html#about">About</a>
-          <a href="index.html#leader">Supervisor</a>
+                <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
           <a href="index.html#research">Research</a>
-          <a href="team.html">Team</a>
-          <a href="index.html#publications">Publications</a>
-          <a href="index.html#join">Join Us</a>
-          <a href="index.html#partners">Partners</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="platform.html">Platform</a>
+          <a href="team.html">People</a>
+          <a href="results.html">Publications</a>
+          <a href="join.html">Join</a>
           <span class="language-switch" aria-label="Language switch"><span aria-current="true">EN</span><a href="../research-multimodal.html" lang="zh-CN">CN</a></span>
         </nav>
       </div>
     </header>
 
-    <main id="main-content">
-      <section class="detail-hero fade-in-up">
+        <main id="main-content">
+      <section class="research-hero">
         <div class="container">
           <a href="index.html#research" class="detail-back">← Back to research</a>
-          <p class="block-eyebrow">Research Direction 01</p>
-          <h1 class="detail-title">Multimodal Sensing</h1>
-          <p class="detail-lead">Lead: <strong>Xuwen Zhang</strong> · Email: barcaxu@outlook.com</p>
+          <div class="research-hero-grid">
+            <div class="research-hero-copy">
+              <span class="research-hero-number">01</span>
+              <p class="research-hero-label">Multimodal Sensing</p>
+              <h1 class="research-hero-title">Multimodal Sensing</h1>
+              <p class="research-hero-lead">Understanding human and environmental states through collaborative fusion of multi-source sensing data.</p>
+              <p class="research-hero-meta">Lead: <strong>Xuwen Zhang</strong> · barcaxu@outlook.com</p>
+            </div>
+            <div class="research-hero-visual" aria-hidden="true">
+              <svg viewBox="0 0 440 300" fill="none"><circle class="rv-orbit" cx="220" cy="150" r="70"/><circle class="rv-orbit" cx="220" cy="150" r="118"/><path class="rv-orbit" d="M78 196 C148 74 292 74 360 168"/><path class="rv-orbit" d="M104 238 C190 152 302 162 400 210"/><circle class="rv-node" cx="78" cy="196" r="7"/><circle class="rv-node" cx="220" cy="150" r="9"/><circle class="rv-node" cx="360" cy="168" r="7"/><circle class="rv-core" cx="220" cy="150" r="4"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav class="subpage-index" aria-label="On this page"><div class="container subpage-index-inner"><span>On this page</span><div class="subpage-index-links"><a href="#overview">Overview</a><a href="#research-focus">Research focus</a><a href="#background">Background</a><a href="#future-directions">Future directions</a><a href="#selected-work">Selected work</a></div></div></nav>
+
+      <section class="section fade-in-up" id="overview">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Overview</h2>
+          <p>Multimodal sensing studies how to understand human, device, and environmental states from multiple sources of information. A single sensor usually sees only one side of a scene, while wireless signals, millimeter-wave radar, vision, and other sensors describe the same target from different angles. The group aims to build more stable, continuous, and deployable sensing capabilities through multi-source data collection, feature modeling, and collaborative fusion.</p>
+          <p>This direction focuses on multi-source sensing-data fusion for human localization, physiological and behavioral sensing, human pose estimation, and environmental sensing, with attention to signal interference, modality gaps, cross-scene generalization, and real-time deployment.</p>
         </div>
       </section>
 
-      <article class="section news-article fade-in-up">
-        <div class="container news-container">
-          <header class="news-header">
-            <p class="news-kicker">Research Direction</p>
-            <h2>Multimodal sensing for human and environmental understanding</h2>
-            <p>Multimodal sensing studies how to understand human, device, and environmental states from multiple sources of information. A single sensor usually sees only one side of a scene, while wireless signals, millimeter-wave radar, vision, and other sensors describe the same target from different angles. The group aims to build more stable, continuous, and deployable sensing capabilities through multi-source data collection, feature modeling, and collaborative fusion.</p>
-            <div class="news-summary" aria-label="Direction highlights">
-              <span>Core tasks</span>
-              <p>This direction focuses on multi-source sensing-data fusion for human localization, physiological and behavioral sensing, human pose estimation, and environmental sensing, with attention to signal interference, modality gaps, cross-scene generalization, and real-time deployment.</p>
-            </div>
-          </header>
-
-          <section class="news-section">
-            <h3>Industry background</h3>
-            <p>Smart homes, healthcare, public safety, and mobile robotics all need systems that can continuously interpret human activities and surrounding environments. Methods based on a single sensor often have limited information and become less stable when the scene changes. A model that works in one room, with one device placement or one activity pattern, may degrade noticeably after the environment changes.</p>
-            <p>Vision provides appearance, pose, and scene semantics, but can be affected by lighting, occlusion, and privacy requirements. Wireless sensing covers a broad area without wearable devices or visible light, but it is sensitive to room structure, device placement, and multipath propagation. Millimeter-wave radar provides range, velocity, angle, and point-cloud information. It is robust to lighting and works well when combined with other modalities.</p>
-            <p>The value of multimodal sensing is not simply adding more sensors. The core question is how different sources of information can be aligned, complemented, and fused so that the system remains stable when one modality is weak or incomplete. This complementary relationship allows the system to move from isolated detection toward joint scene understanding.</p>
-            <p>A complete multimodal sensing pipeline therefore includes data acquisition, preprocessing, spatiotemporal alignment, feature extraction, information fusion, and state output. This pipeline determines not only whether the algorithm can obtain useful information, but also whether the system can operate continuously in real IoT environments.</p>
-          </section>
-
-          <section class="news-section">
-            <h3>Research directions</h3>
-            <p>The group builds on WiFi CSI, BFI, millimeter-wave radar, vision sensors, and mobile robot platforms, with research covering human localization, physiological and behavioral sensing, human pose estimation, and environmental sensing. The work emphasizes a closed loop among experimental platforms, algorithmic models, and application tasks: collecting data from real devices, analyzing the strengths and limits of each modality, and then designing fusion methods for specific sensing tasks.</p>
-            <div class="focus-list">
-              <section class="focus-item">
-                <span>01</span>
-                <div>
-                  <h4>Human localization</h4>
-                  <p>Human localization estimates where people are and how they move in indoor spaces. It is an important foundation for smart spaces, personnel management, public safety, and mobile services. The group studies methods based on wireless signals, millimeter-wave radar, and multimodal sensing data, extracting position-related features from radio propagation and radar echoes.</p>
-                  <p>This direction focuses on non-line-of-sight propagation, multipath effects, room-structure changes, device-placement changes, and interference caused by human activities. The goal is to use complementary sensing information to improve localization stability and adaptability across different environments.</p>
-                </div>
-              </section>
-              <section class="focus-item">
-                <span>02</span>
-                <div>
-                  <h4>Physiological and behavioral sensing</h4>
-                  <p>Physiological and behavioral sensing focuses on breathing, heartbeat, chest micro-motion, gestures, gait, and daily activities. Physiological states often produce subtle signal variations, while gestures and gait present clearer temporal patterns and behavioral structures.</p>
-                  <p>The group works on weak-signal extraction, temporal feature analysis, and state recognition for contactless and continuous human-state sensing. This direction will be connected with practical medical needs to study stable acquisition and joint analysis of physiological and behavioral features in complex environments.</p>
-                </div>
-              </section>
-              <section class="focus-item">
-                <span>03</span>
-                <div>
-                  <h4>Human pose estimation</h4>
-                  <p>Human pose estimation infers body structure, limb states, and motion changes from sensing data. It is important for behavior understanding, health assistance, and human-computer interaction. Millimeter-wave radar provides spatial and motion information, vision describes body appearance and key parts, and wireless signals reflect how human activity changes the propagation environment.</p>
-                  <p>The group studies how radar point clouds, vision, and wireless signals complement each other under difficult lighting, partial occlusion, and dynamic environments. This direction focuses on unifying spatial and motion information from different modalities into learnable and interpretable representations.</p>
-                </div>
-              </section>
-              <section class="focus-item">
-                <span>04</span>
-                <div>
-                  <h4>Environmental sensing</h4>
-                  <p>Environmental sensing considers occupancy, people counting, activity states, and line-of-sight or non-line-of-sight propagation conditions. Compared with recognizing a single human action, environmental sensing emphasizes the understanding of the whole space, including human activities, device positions, room structure, and dynamic interference.</p>
-                  <p>The group studies how human activity, room structure, and device deployment affect sensing results, with the aim of reducing dependence on fixed environments. This direction will support continuous and low-intrusion environmental understanding for smart spaces and IoT systems.</p>
-                </div>
-              </section>
-            </div>
-            <aside class="news-note">
-              <h4>Medical collaboration</h4>
-              <p>The group will combine its collaboration with Jiangsu Province Hospital to explore multimodal sensing for physiological states, behavioral activities, and health-related information analysis.</p>
-              <figure class="news-note-media">
-                <img src="../assets/images/hospital-collaboration.jpg" alt="Collaboration meeting at Jiangsu Province Hospital for millimeter-wave radar contactless cardiac monitoring" loading="lazy">
-                <figcaption>Collaboration meeting at Jiangsu Province Hospital</figcaption>
-              </figure>
-            </aside>
-          </section>
-
-          <section class="news-section">
-            <h3>Future directions</h3>
-            <p>Future work will focus on unified multimodal representation, large-model-assisted scene understanding, edge deployment, and real-time sensing. Wireless signals, radar point clouds, and visual data have very different structures, so unified representations can help systems reason across heterogeneous sensing data and better handle missing modalities, device changes, and scene transfer.</p>
-            <p>In artificial intelligence and large-model directions, the group will study multimodal knowledge transfer, scene semantics, and complex state reasoning. A sensing system should not only output simple labels such as occupied or empty. It should gradually understand the relationships among human activities, environmental states, and scene changes, and support more complex intelligent decisions.</p>
-            <p>In edge computing, the work will consider the compute capacity, communication cost, and latency requirements of real IoT devices, and explore collaborative processing among terminals, edge nodes, and computing platforms so that intelligent sensing methods can be deployed in practical environments.</p>
-            <p>Integrated sensing and communication is a natural extension of multimodal sensing. Wireless signals can transmit data and also sense humans, devices, and environments. The group will study joint design of communication links and sensing tasks, extracting useful environmental information while maintaining communication performance.</p>
-          </section>
-
-          <section class="news-section">
-            <h3>Representative works</h3>
-            <div class="publication-list direction-publications">
-              <article class="publication-item">
-                <span class="publication-number">01</span>
-                <div>
-                  <h3>Millimeter-Wave, WiFi, and Infrared Integrated Real-Time Acquisition Platform</h3>
-                  <p class="publication-meta">Type: Experimental platform <span aria-hidden="true">·</span> Direction: Multimodal sensing</p>
-                  <p>The group has developed an integrated real-time acquisition platform combining millimeter-wave radar, WiFi, and infrared sensing. The platform supports multi-source data collection, synchronized observation, and algorithm validation for human-state sensing, respiratory detection, and complex-scene experiments.</p>
-                  <figure class="publication-media">
-                    <img src="../assets/images/multimodal-realtime-platform.jpg" alt="Millimeter-wave, WiFi, and infrared integrated real-time acquisition platform" loading="lazy">
-                    <figcaption>Integrated real-time acquisition platform</figcaption>
-                  </figure>
-                </div>
-              </article>
-              <article class="publication-item">
-                <span class="publication-number">02</span>
-                <div>
-                  <h3>AceNet: attention-guided context enhancement for imbalanced action recognition via RF signals</h3>
-                  <p class="publication-authors">Authors: Biyun Sheng, Hao Liu, Hui Cai, Yiping Zuo, Jian Zhou, Fu Xiao</p>
-                  <p class="publication-meta">Venue: IEEE Transactions on Mobile Computing <span aria-hidden="true">·</span> Year: 2026</p>
-                  <p>This work addresses class imbalance in RF-based activity recognition and proposes an attention-guided context enhancement network to distinguish semantically similar actions and reduce imbalance-induced decision-boundary bias.</p>
-                  <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11408084">View paper</a></p>
-                </div>
-              </article>
-              <article class="publication-item">
-                <span class="publication-number">03</span>
-                <div>
-                  <h3>CoSense: Respiratory Detection Based on WIFI CSI and Millimeter-Wave Radar</h3>
-                  <p class="publication-authors">Authors: Jiaming Liu, Xiaoxiao Qiao, Zeyuan Wu, Weibei Fan, Yiping Zuo, Xin He</p>
-                  <p class="publication-meta">Venue: 2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4117-4122 <span aria-hidden="true">·</span> Year: 2026</p>
-                  <p>This work proposes a contactless respiration detection system based on joint WiFi CSI and millimeter-wave sensing, fusing signal features to improve respiratory detection accuracy in complex indoor environments.</p>
-                  <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11581638">View paper</a></p>
-                </div>
-              </article>
-              <article class="publication-item">
-                <span class="publication-number">04</span>
-                <div>
-                  <h3>Adaptive Hybrid Routing for Wi-Fi CSI-Based Indoor Human Activity Recognition Using DTW-KNN and SVM</h3>
-                  <p class="publication-authors">Authors: Jiasheng Song, Yiping Zuo, Chen Dai, Weicong Chen, Ning Gao, Xin He, Weibei Fan</p>
-                  <p class="publication-meta">Venue: 2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4098-4103 <span aria-hidden="true">·</span> Year: 2026</p>
-                  <p>This work studies WiFi CSI-based indoor human activity recognition and proposes an adaptive hybrid routing method combining DTW-KNN and SVM for robust recognition in resource-constrained scenarios.</p>
-                  <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11582546">View paper</a></p>
-                </div>
-              </article>
-            </div>
-          </section>
+      <section class="section section-tinted fade-in-up" id="research-focus">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Research Focus</h2>
+          <p>The group builds on WiFi CSI, BFI, millimeter-wave radar, vision sensors, and mobile robot platforms, with research covering human localization, physiological and behavioral sensing, human pose estimation, and environmental sensing. The work emphasizes a closed loop among experimental platforms, algorithmic models, and application tasks: collecting data from real devices, analyzing the strengths and limits of each modality, and then designing fusion methods for specific sensing tasks.</p>
+          <div class="focus-list">
+            <section class="focus-item"><span>01</span><div><h4>Human localization</h4><p>Human localization estimates where people are and how they move in indoor spaces. It is an important foundation for smart spaces, personnel management, public safety, and mobile services. The group studies methods based on wireless signals, millimeter-wave radar, and multimodal sensing data, extracting position-related features from radio propagation and radar echoes.</p><p>This direction focuses on non-line-of-sight propagation, multipath effects, room-structure changes, device-placement changes, and interference caused by human activities. The goal is to use complementary sensing information to improve localization stability and adaptability across different environments.</p></div></section>
+            <section class="focus-item"><span>02</span><div><h4>Physiological and behavioral sensing</h4><p>Physiological and behavioral sensing focuses on breathing, heartbeat, chest micro-motion, gestures, gait, and daily activities. Physiological states often produce subtle signal variations, while gestures and gait present clearer temporal patterns and behavioral structures.</p><p>The group works on weak-signal extraction, temporal feature analysis, and state recognition for contactless and continuous human-state sensing. This direction will be connected with practical medical needs to study stable acquisition and joint analysis of physiological and behavioral features in complex environments.</p></div></section>
+            <section class="focus-item"><span>03</span><div><h4>Human pose estimation</h4><p>Human pose estimation infers body structure, limb states, and motion changes from sensing data. It is important for behavior understanding, health assistance, and human-computer interaction. Millimeter-wave radar provides spatial and motion information, vision describes body appearance and key parts, and wireless signals reflect how human activity changes the propagation environment.</p><p>The group studies how radar point clouds, vision, and wireless signals complement each other under difficult lighting, partial occlusion, and dynamic environments. This direction focuses on unifying spatial and motion information from different modalities into learnable and interpretable representations.</p></div></section>
+            <section class="focus-item"><span>04</span><div><h4>Environmental sensing</h4><p>Environmental sensing considers occupancy, people counting, activity states, and line-of-sight or non-line-of-sight propagation conditions. Compared with recognizing a single human action, environmental sensing emphasizes the understanding of the whole space, including human activities, device positions, room structure, and dynamic interference.</p><p>The group studies how human activity, room structure, and device deployment affect sensing results, with the aim of reducing dependence on fixed environments. This direction will support continuous and low-intrusion environmental understanding for smart spaces and IoT systems.</p></div></section>
+          </div>
+          <aside class="news-note">
+            <h4>Medical collaboration</h4>
+            <p>The group will combine its collaboration with Jiangsu Province Hospital to explore multimodal sensing for physiological states, behavioral activities, and health-related information analysis.</p>
+            <figure class="news-note-media"><img src="../assets/images/hospital-collaboration.jpg" alt="Collaboration meeting at Jiangsu Province Hospital for millimeter-wave radar contactless cardiac monitoring" loading="lazy"><figcaption>Collaboration meeting at Jiangsu Province Hospital</figcaption></figure>
+          </aside>
         </div>
-      </article>
+      </section>
+
+      <section class="section fade-in-up" id="background">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Background</h2>
+          <p>Smart homes, healthcare, public safety, and mobile robotics all need systems that can continuously interpret human activities and surrounding environments. Methods based on a single sensor often have limited information and become less stable when the scene changes. A model that works in one room, with one device placement or one activity pattern, may degrade noticeably after the environment changes.</p>
+          <p>Vision provides appearance, pose, and scene semantics, but can be affected by lighting, occlusion, and privacy requirements. Wireless sensing covers a broad area without wearable devices or visible light, but it is sensitive to room structure, device placement, and multipath propagation. Millimeter-wave radar provides range, velocity, angle, and point-cloud information. It is robust to lighting and works well when combined with other modalities.</p>
+          <p>The value of multimodal sensing is not simply adding more sensors. The core question is how different sources of information can be aligned, complemented, and fused so that the system remains stable when one modality is weak or incomplete. This complementary relationship allows the system to move from isolated detection toward joint scene understanding.</p>
+          <p>A complete multimodal sensing pipeline therefore includes data acquisition, preprocessing, spatiotemporal alignment, feature extraction, information fusion, and state output. This pipeline determines not only whether the algorithm can obtain useful information, but also whether the system can operate continuously in real IoT environments.</p>
+        </div>
+      </section>
+
+      <section class="section section-tinted fade-in-up" id="future-directions">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Future Directions</h2>
+          <p>Future work will focus on unified multimodal representation, large-model-assisted scene understanding, edge deployment, and real-time sensing. Wireless signals, radar point clouds, and visual data have very different structures, so unified representations can help systems reason across heterogeneous sensing data and better handle missing modalities, device changes, and scene transfer.</p>
+          <p>In artificial intelligence and large-model directions, the group will study multimodal knowledge transfer, scene semantics, and complex state reasoning. A sensing system should not only output simple labels such as occupied or empty. It should gradually understand the relationships among human activities, environmental states, and scene changes, and support more complex intelligent decisions.</p>
+          <p>In edge computing, the work will consider the compute capacity, communication cost, and latency requirements of real IoT devices, and explore collaborative processing among terminals, edge nodes, and computing platforms so that intelligent sensing methods can be deployed in practical environments.</p>
+          <p>Integrated sensing and communication is a natural extension of multimodal sensing. Wireless signals can transmit data and also sense humans, devices, and environments. The group will study joint design of communication links and sensing tasks, extracting useful environmental information while maintaining communication performance.</p>
+        </div>
+      </section>
+
+      <section class="section fade-in-up" id="selected-work">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Selected Work</h2>
+          <div class="publication-list direction-publications">
+            <article class="publication-item"><span class="publication-number">01</span><div><h3>Millimeter-Wave, WiFi, and Infrared Integrated Real-Time Acquisition Platform</h3><p class="publication-meta">Type: Experimental platform <span aria-hidden="true">·</span> Direction: Multimodal sensing</p><p>The group has developed an integrated real-time acquisition platform combining millimeter-wave radar, WiFi, and infrared sensing. The platform supports multi-source data collection, synchronized observation, and algorithm validation for human-state sensing, respiratory detection, and complex-scene experiments.</p><figure class="publication-media"><img src="../assets/images/multimodal-realtime-platform.jpg" alt="Millimeter-wave, WiFi, and infrared integrated real-time acquisition platform" loading="lazy"><figcaption>Integrated real-time acquisition platform</figcaption></figure></div></article>
+            <article class="publication-item"><span class="publication-number">02</span><div><h3>AceNet: attention-guided context enhancement for imbalanced action recognition via RF signals</h3><p class="publication-authors">Authors: Biyun Sheng, Hao Liu, Hui Cai, Yiping Zuo, Jian Zhou, Fu Xiao</p><p class="publication-meta">Venue: IEEE Transactions on Mobile Computing <span aria-hidden="true">·</span> Year: 2026</p><p>This work addresses class imbalance in RF-based activity recognition and proposes an attention-guided context enhancement network to distinguish semantically similar actions and reduce imbalance-induced decision-boundary bias.</p><p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11408084">View paper</a></p></div></article>
+            <article class="publication-item"><span class="publication-number">03</span><div><h3>CoSense: Respiratory Detection Based on WIFI CSI and Millimeter-Wave Radar</h3><p class="publication-authors">Authors: Jiaming Liu, Xiaoxiao Qiao, Zeyuan Wu, Weibei Fan, Yiping Zuo, Xin He</p><p class="publication-meta">Venue: 2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4117-4122 <span aria-hidden="true">·</span> Year: 2026</p><p>This work proposes a contactless respiration detection system based on joint WiFi CSI and millimeter-wave sensing, fusing signal features to improve respiratory detection accuracy in complex indoor environments.</p><p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11581638">View paper</a></p></div></article>
+            <article class="publication-item"><span class="publication-number">04</span><div><h3>Adaptive Hybrid Routing for Wi-Fi CSI-Based Indoor Human Activity Recognition Using DTW-KNN and SVM</h3><p class="publication-authors">Authors: Jiasheng Song, Yiping Zuo, Chen Dai, Weicong Chen, Ning Gao, Xin He, Weibei Fan</p><p class="publication-meta">Venue: 2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4098-4103 <span aria-hidden="true">·</span> Year: 2026</p><p>This work studies WiFi CSI-based indoor human activity recognition and proposes an adaptive hybrid routing method combining DTW-KNN and SVM for robust recognition in resource-constrained scenarios.</p><p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11582546">View paper</a></p></div></article>
+          </div>
+        </div>
+      </section>
+      <section class="page-end-navigation" aria-labelledby="related-directions-title"><div class="container page-end-navigation-inner"><p class="page-end-label" id="related-directions-title">Related directions</p><div class="page-end-links"><a href="research-ai.html"><span>02 · Integrated Sensing and Communication</span><span aria-hidden="true">→</span></a><a href="research-communication.html"><span>03 · Intelligent Communication</span><span aria-hidden="true">→</span></a></div></div></section>
     </main>
 
     <footer class="site-footer">

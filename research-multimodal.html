@@ -11,19 +11,16 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
   </head>
-  <body>
+  <body class="page-shell page-research">
     <a class="skip-link" href="#main-content">跳转到主要内容</a>
 
     <header class="site-header" id="top">
       <div class="header-inner container">
-        <a class="site-brand" href="index.html" aria-label="多模态智能通信与感知首页">
-          <span class="brand-mark" aria-hidden="true"><img src="assets/images/mics-logo.png" alt=""></span>
+                <a class="site-brand" href="index.html" aria-label="MICS 首页">
+          <span class="brand-mark" aria-hidden="true"><img src="assets/images/mics-logo.png" alt="" width="64" height="64"></span>
           <span class="brand-text">
-            <strong>多模态智能通信与感知</strong>
-            <small>
-              <span>Multimodal Intelligent Communication and Sensing</span>
-              <span>南京邮电大学 · 计算机学院</span>
-            </small>
+            <strong>MICS</strong>
+            <small>多模态智能通信与感知</small>
           </span>
         </a>
 
@@ -34,154 +31,174 @@
           <span aria-hidden="true"></span>
         </button>
 
-        <nav class="primary-nav" id="primary-navigation" aria-label="主要导航">
-          <a href="index.html#about">课题组介绍</a>
-          <a href="index.html#leader">导师介绍</a>
+                <nav class="primary-nav" id="primary-navigation" aria-label="主要导航">
           <a href="index.html#research">研究方向</a>
-          <a href="index.html#team">团队成员</a>
-          <a href="index.html#publications">学术成果</a>
-          <a href="index.html#join">本科生招新</a>
-          <a href="index.html#partners">合作单位</a>
-          <a href="index.html#contact">联系方式</a>
+          <a href="platform.html">实验平台</a>
+          <a href="team.html">团队成员</a>
+          <a href="results.html">学术成果</a>
+          <a href="join.html">本科生招新</a>
           <span class="language-switch" aria-label="语言切换"><a href="en/research-multimodal.html" lang="en">EN</a><span aria-current="true">CN</span></span>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section class="detail-hero fade-in-up">
+      <section class="research-hero">
         <div class="container">
           <a href="index.html#research" class="detail-back">← 返回研究方向</a>
-          <p class="block-eyebrow">Research Direction 01</p>
-          <h1 class="detail-title">多模态感知</h1>
-          <p class="detail-lead">主要负责人：<strong>张栩闻</strong> · Email：barcaxu@outlook.com</p>
+          <div class="research-hero-grid">
+            <div class="research-hero-copy">
+              <span class="research-hero-number">01</span>
+              <p class="research-hero-label">Multimodal Sensing</p>
+              <h1 class="research-hero-title">多模态感知</h1>
+              <p class="research-hero-lead">面向人体与环境状态的智能理解，构建多源感知数据的协同融合能力。</p>
+              <p class="research-hero-meta">负责人：<strong>张栩闻</strong> · barcaxu@outlook.com</p>
+            </div>
+            <div class="research-hero-visual" aria-hidden="true">
+              <svg viewBox="0 0 440 300" fill="none">
+                <circle class="rv-orbit" cx="220" cy="150" r="70"/>
+                <circle class="rv-orbit" cx="220" cy="150" r="118"/>
+                <path class="rv-orbit" d="M78 196 C148 74 292 74 360 168"/>
+                <path class="rv-orbit" d="M104 238 C190 152 302 162 400 210"/>
+                <circle class="rv-node" cx="78" cy="196" r="7"/>
+                <circle class="rv-node" cx="220" cy="150" r="9"/>
+                <circle class="rv-node" cx="360" cy="168" r="7"/>
+                <circle class="rv-core" cx="220" cy="150" r="4"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
-      <article class="section news-article fade-in-up">
-        <div class="container news-container">
-          <header class="news-header">
-            <p class="news-kicker">研究方向</p>
-            <h2>多模态感知：面向人体与环境状态的智能理解</h2>
-            <p>多模态感知关注人体、设备和环境状态的智能理解。单一传感器往往只能看到对象的一个侧面，而无线信号、毫米波雷达、视觉图像和其他传感信息可以从不同角度描述同一场景。课题组希望通过多源数据采集、特征建模和协同融合，构建更稳定、更连续、更适合真实环境部署的智能感知能力。</p>
-            <div class="news-summary" aria-label="方向重点">
-              <span>重点任务</span>
-              <p>本方向聚焦多源感知数据融合，面向人体定位、生理与行为感知、人体姿态估计和环境感知四类任务开展研究，重点解决复杂室内场景中的信号干扰、模态差异、跨场景泛化和实时部署问题。</p>
-            </div>
-          </header>
+      <nav class="subpage-index" aria-label="本页导航"><div class="container subpage-index-inner"><span>本页内容</span><div class="subpage-index-links"><a href="#overview">方向概览</a><a href="#research-focus">研究重点</a><a href="#background">研究背景</a><a href="#future-directions">未来方向</a><a href="#selected-work">代表性工作</a></div></div></nav>
 
-          <section class="news-section">
-            <h3>行业背景</h3>
-            <p>智能家居、智慧医疗、公共安全和移动机器人等场景都需要系统持续理解人体活动和周围环境。传统方法通常依赖单一传感器，信息来源有限，换到复杂环境后稳定性容易下降。例如，同一套模型在不同房间、不同设备位置或不同人群活动模式下，可能会出现明显的性能波动。</p>
-            <p>视觉传感器能提供外观、姿态和场景语义，但容易受到光照、遮挡和隐私需求的影响。无线信号覆盖范围广，不需要人体佩戴设备，也不依赖可见光，可以通过信道变化反映人体活动，但会受到空间结构、设备位置和多径传播的影响。毫米波雷达可以获得距离、速度、角度和点云信息，对光照不敏感，在复杂场景中适合与其他模态协同使用。</p>
-            <p>多模态感知的价值不在于简单增加传感器数量，而在于研究不同信息之间如何对齐、互补和融合。某一种信息不稳定时，另一种信息可以补上；某一种传感器只能看到局部状态时，其他模态可以提供更完整的上下文。通过这种互补关系，系统可以从“单点判断”走向“联合理解”。</p>
-            <p>因此，多模态感知需要建立从数据采集、预处理、时空对齐、特征提取、信息融合到状态输出的完整链路。这个链路不仅决定算法能否获得有效信息，也决定系统能否在真实物联网场景中持续运行。</p>
-          </section>
-
-          <section class="news-section">
-            <h3>研究方向</h3>
-            <p>课题组依托 WiFi CSI、BFI、毫米波雷达、视觉传感器和移动机器人等实验平台，围绕人体定位、生理与行为感知、人体姿态估计和环境感知开展研究。相关工作强调实验平台、算法模型和应用任务之间的闭环：先从真实设备获取数据，再分析不同模态的优势与局限，最后面向具体任务设计融合方法。</p>
-            <div class="focus-list">
-              <section class="focus-item">
-                <span>01</span>
-                <div>
-                  <h4>人体定位</h4>
-                  <p>人体定位用于估计人员在室内空间中的位置和移动过程，是智能空间、人员管理、公共安全和移动服务的重要基础。课题组研究基于无线信号、毫米波雷达和多源感知信息的人体定位方法，通过分析人体对无线传播路径和雷达回波的影响，提取与位置相关的特征。</p>
-                  <p>该方向重点关注非视距传播、多径效应、空间结构变化、设备位置变化及人员活动带来的干扰，探索不同感知信息之间的互补机制，提高人体定位在不同环境和场景中的稳定性与适应能力。</p>
-                </div>
-              </section>
-              <section class="focus-item">
-                <span>02</span>
-                <div>
-                  <h4>生理与行为感知</h4>
-                  <p>生理与行为感知关注呼吸、心跳、胸腔微动、手势、步态和日常活动等人体状态。呼吸、心跳等生理活动会带来细微的信号变化，手势、步态和日常活动则呈现出更明显的时间连续性和行为模式。</p>
-                  <p>课题组关注弱信号提取、时序特征分析和状态识别，探索非接触式、连续化的人体状态感知方法。该方向将结合医学场景中的实际需求，研究复杂环境下生理信号与行为特征的稳定获取和协同分析。</p>
-                </div>
-              </section>
-              <section class="focus-item">
-                <span>03</span>
-                <div>
-                  <h4>人体姿态估计</h4>
-                  <p>人体姿态估计需要从感知数据中判断人体空间结构、肢体状态和运动变化，是行为理解、健康辅助和人机交互等任务的重要基础。毫米波雷达可以提供目标的空间位置与运动信息，视觉传感器能够描述人体外观和关键部位，无线信号则可以反映人体活动对传播环境造成的整体影响。</p>
-                  <p>课题组研究毫米波点云、视觉信息和无线信号之间的互补关系，用于提升复杂光照、局部遮挡和动态环境下的姿态估计能力。该方向关注如何把不同模态中的空间信息和运动信息统一到可学习、可解释的表示中。</p>
-                </div>
-              </section>
-              <section class="focus-item">
-                <span>04</span>
-                <div>
-                  <h4>环境感知</h4>
-                  <p>环境感知关注空间中是否存在人员、人员数量、活动状态，以及视距和非视距等传播条件。相比只识别单个人体动作，环境感知更强调对空间整体状态的理解，需要同时考虑人员活动、设备位置、房间结构和动态干扰。</p>
-                  <p>课题组分析人体活动、空间结构和设备部署方式对感知结果的影响，减少系统对固定环境的依赖。该方向将为智能空间和物联网系统提供持续、低干扰的环境理解能力。</p>
-                </div>
-              </section>
-            </div>
-            <aside class="news-note">
-              <h4>医工交叉合作</h4>
-              <p>课题组将结合与江苏省人民医院的合作，探索多模态感知技术在人体生理状态、行为活动和健康相关信息分析中的应用。</p>
-              <figure class="news-note-media">
-                <img src="assets/images/hospital-collaboration.jpg" alt="江苏省人民医院毫米波雷达无接触心电监测项目推进会现场" loading="lazy">
-                <figcaption>江苏省人民医院合作交流现场</figcaption>
-              </figure>
-            </aside>
-          </section>
-
-          <section class="news-section">
-            <h3>未来方向</h3>
-            <p>未来研究将关注多模态统一表征、大模型辅助场景理解、边缘部署与实时感知。无线信号、毫米波点云和视觉数据的结构差异很大，统一表征可以帮助系统在同一框架下理解不同模态之间的关系，使算法能够更好地处理模态缺失、设备变化和场景迁移。</p>
-            <p>在人工智能和大模型方向，课题组将关注多模态知识迁移、场景语义理解和复杂状态推理。感知系统不应只输出“有人”或“无人”等简单结果，还需要逐步理解人体活动、环境状态和场景变化之间的关系，为更复杂的智能决策提供支撑。</p>
-            <p>在边缘计算方向，研究将面向实际物联网设备的计算能力、通信开销和实时性需求，探索感知数据在终端、边缘节点与计算平台之间的协同处理方式，使智能感知方法能够更好地部署到真实应用环境中。</p>
-            <p>通感一体化是多模态感知的重要延伸。无线信号不只承担数据通信，也可以用于人体、设备和环境状态感知。课题组将探索通信链路与感知任务之间的协同设计，在保证通信性能的同时提取有用的环境信息，推动通信系统从信息传输基础设施进一步发展为具备环境理解能力的智能系统。</p>
-          </section>
-
-          <section class="news-section">
-            <h3>代表成果</h3>
-            <div class="publication-list direction-publications">
-              <article class="publication-item">
-                <span class="publication-number">01</span>
-                <div>
-                  <h3>毫米波-WiFi-红外一体化实时采集平台</h3>
-                  <p class="publication-meta">Type：实验平台 <span aria-hidden="true">·</span> Direction：多模态感知</p>
-                  <p>课题组开发了毫米波、WiFi 与红外的一体化实时采集平台，用于多源感知数据采集、同步观察和算法验证，为人体状态感知、呼吸检测和复杂场景实验提供平台支撑。</p>
-                  <figure class="publication-media">
-                    <img src="assets/images/multimodal-realtime-platform.jpg" alt="毫米波-WiFi-红外一体化实时采集平台实验现场" loading="lazy">
-                    <figcaption>毫米波-WiFi-红外一体化实时采集平台</figcaption>
-                  </figure>
-                </div>
-              </article>
-              <article class="publication-item">
-                <span class="publication-number">02</span>
-                <div>
-                  <h3>AceNet: attention-guided context enhancement for imbalanced action recognition via RF signals</h3>
-                  <p class="publication-authors">Authors：Biyun Sheng, Hao Liu, Hui Cai, Yiping Zuo, Jian Zhou, Fu Xiao</p>
-                  <p class="publication-meta">Venue：IEEE Transactions on Mobile Computing <span aria-hidden="true">·</span> Year：2026</p>
-                  <p>该工作面向射频信号行为识别中的类别不平衡问题，提出注意力引导的上下文增强网络，从特征层面区分相似动作并缓解不平衡带来的决策边界偏差。</p>
-                  <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11408084">查看论文</a></p>
-                </div>
-              </article>
-              <article class="publication-item">
-                <span class="publication-number">03</span>
-                <div>
-                  <h3>CoSense: Respiratory Detection Based on WIFI CSI and Millimeter-Wave Radar</h3>
-                  <p class="publication-authors">Authors：Jiaming Liu, Xiaoxiao Qiao, Zeyuan Wu, Weibei Fan, Yiping Zuo, Xin He</p>
-                  <p class="publication-meta">Venue：2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4117-4122 <span aria-hidden="true">·</span> Year：2026</p>
-                  <p>该工作提出基于 WiFi CSI 与毫米波雷达联合感知的无接触呼吸检测系统，通过融合两类信号特征提升复杂室内环境下的呼吸检测准确性。</p>
-                  <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11581638">查看论文</a></p>
-                </div>
-              </article>
-              <article class="publication-item">
-                <span class="publication-number">04</span>
-                <div>
-                  <h3>Adaptive Hybrid Routing for Wi-Fi CSI-Based Indoor Human Activity Recognition Using DTW-KNN and SVM</h3>
-                  <p class="publication-authors">Authors：Jiasheng Song, Yiping Zuo, Chen Dai, Weicong Chen, Ning Gao, Xin He, Weibei Fan</p>
-                  <p class="publication-meta">Venue：2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4098-4103 <span aria-hidden="true">·</span> Year：2026</p>
-                  <p>该工作面向 WiFi CSI 室内人体活动识别，提出结合 DTW-KNN 与 SVM 的自适应混合路由方法，用于提升资源受限场景下的识别鲁棒性。</p>
-                  <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11582546">查看论文</a></p>
-                </div>
-              </article>
-            </div>
-          </section>
+      <section class="section fade-in-up" id="overview">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Overview</h2>
+          <p>多模态感知关注人体、设备和环境状态的智能理解。单一传感器往往只能看到对象的一个侧面，而无线信号、毫米波雷达、视觉图像和其他传感信息可以从不同角度描述同一场景。课题组希望通过多源数据采集、特征建模和协同融合，构建更稳定、更连续、更适合真实环境部署的智能感知能力。</p>
+          <p>本方向聚焦多源感知数据融合，面向人体定位、生理与行为感知、人体姿态估计和环境感知四类任务开展研究，重点解决复杂室内场景中的信号干扰、模态差异、跨场景泛化和实时部署问题。</p>
         </div>
-      </article>
+      </section>
+
+      <section class="section section-tinted fade-in-up" id="research-focus">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Research Focus</h2>
+          <p>课题组依托 WiFi CSI、BFI、毫米波雷达、视觉传感器和移动机器人等实验平台，围绕人体定位、生理与行为感知、人体姿态估计和环境感知开展研究。相关工作强调实验平台、算法模型和应用任务之间的闭环：先从真实设备获取数据，再分析不同模态的优势与局限，最后面向具体任务设计融合方法。</p>
+          <div class="focus-list">
+            <section class="focus-item">
+              <span>01</span>
+              <div>
+                <h4>人体定位</h4>
+                <p>人体定位用于估计人员在室内空间中的位置和移动过程，是智能空间、人员管理、公共安全和移动服务的重要基础。课题组研究基于无线信号、毫米波雷达和多源感知信息的人体定位方法，通过分析人体对无线传播路径和雷达回波的影响，提取与位置相关的特征。</p>
+                <p>该方向重点关注非视距传播、多径效应、空间结构变化、设备位置变化及人员活动带来的干扰，探索不同感知信息之间的互补机制，提高人体定位在不同环境和场景中的稳定性与适应能力。</p>
+              </div>
+            </section>
+            <section class="focus-item">
+              <span>02</span>
+              <div>
+                <h4>生理与行为感知</h4>
+                <p>生理与行为感知关注呼吸、心跳、胸腔微动、手势、步态和日常活动等人体状态。呼吸、心跳等生理活动会带来细微的信号变化，手势、步态和日常活动则呈现出更明显的时间连续性和行为模式。</p>
+                <p>课题组关注弱信号提取、时序特征分析和状态识别，探索非接触式、连续化的人体状态感知方法。该方向将结合医学场景中的实际需求，研究复杂环境下生理信号与行为特征的稳定获取和协同分析。</p>
+              </div>
+            </section>
+            <section class="focus-item">
+              <span>03</span>
+              <div>
+                <h4>人体姿态估计</h4>
+                <p>人体姿态估计需要从感知数据中判断人体空间结构、肢体状态和运动变化，是行为理解、健康辅助和人机交互等任务的重要基础。毫米波雷达可以提供目标的空间位置与运动信息，视觉传感器能够描述人体外观和关键部位，无线信号则可以反映人体活动对传播环境造成的整体影响。</p>
+                <p>课题组研究毫米波点云、视觉信息和无线信号之间的互补关系，用于提升复杂光照、局部遮挡和动态环境下的姿态估计能力。该方向关注如何把不同模态中的空间信息和运动信息统一到可学习、可解释的表示中。</p>
+              </div>
+            </section>
+            <section class="focus-item">
+              <span>04</span>
+              <div>
+                <h4>环境感知</h4>
+                <p>环境感知关注空间中是否存在人员、人员数量、活动状态，以及视距和非视距等传播条件。相比只识别单个人体动作，环境感知更强调对空间整体状态的理解，需要同时考虑人员活动、设备位置、房间结构和动态干扰。</p>
+                <p>课题组分析人体活动、空间结构和设备部署方式对感知结果的影响，减少系统对固定环境的依赖。该方向将为智能空间和物联网系统提供持续、低干扰的环境理解能力。</p>
+              </div>
+            </section>
+          </div>
+          <aside class="news-note">
+            <h4>医工交叉合作</h4>
+            <p>课题组将结合与江苏省人民医院的合作，探索多模态感知技术在人体生理状态、行为活动和健康相关信息分析中的应用。</p>
+            <figure class="news-note-media">
+              <img src="assets/images/hospital-collaboration.jpg" alt="江苏省人民医院毫米波雷达无接触心电监测项目推进会现场" loading="lazy">
+              <figcaption>江苏省人民医院合作交流现场</figcaption>
+            </figure>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section fade-in-up" id="background">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Background</h2>
+          <p>智能家居、智慧医疗、公共安全和移动机器人等场景都需要系统持续理解人体活动和周围环境。传统方法通常依赖单一传感器，信息来源有限，换到复杂环境后稳定性容易下降。例如，同一套模型在不同房间、不同设备位置或不同人群活动模式下，可能会出现明显的性能波动。</p>
+          <p>视觉传感器能提供外观、姿态和场景语义，但容易受到光照、遮挡和隐私需求的影响。无线信号覆盖范围广，不需要人体佩戴设备，也不依赖可见光，可以通过信道变化反映人体活动，但会受到空间结构、设备位置和多径传播的影响。毫米波雷达可以获得距离、速度、角度和点云信息，对光照不敏感，在复杂场景中适合与其他模态协同使用。</p>
+          <p>多模态感知的价值不在于简单增加传感器数量，而在于研究不同信息之间如何对齐、互补和融合。某一种信息不稳定时，另一种信息可以补上；某一种传感器只能看到局部状态时，其他模态可以提供更完整的上下文。通过这种互补关系，系统可以从“单点判断”走向“联合理解”。</p>
+          <p>因此，多模态感知需要建立从数据采集、预处理、时空对齐、特征提取、信息融合到状态输出的完整链路。这个链路不仅决定算法能否获得有效信息，也决定系统能否在真实物联网场景中持续运行。</p>
+        </div>
+      </section>
+
+      <section class="section section-tinted fade-in-up" id="future-directions">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Future Directions</h2>
+          <p>未来研究将关注多模态统一表征、大模型辅助场景理解、边缘部署与实时感知。无线信号、毫米波点云和视觉数据的结构差异很大，统一表征可以帮助系统在同一框架下理解不同模态之间的关系，使算法能够更好地处理模态缺失、设备变化和场景迁移。</p>
+          <p>在人工智能和大模型方向，课题组将关注多模态知识迁移、场景语义理解和复杂状态推理。感知系统不应只输出“有人”或“无人”等简单结果，还需要逐步理解人体活动、环境状态和场景变化之间的关系，为更复杂的智能决策提供支撑。</p>
+          <p>在边缘计算方向，研究将面向实际物联网设备的计算能力、通信开销和实时性需求，探索感知数据在终端、边缘节点与计算平台之间的协同处理方式，使智能感知方法能够更好地部署到真实应用环境中。</p>
+          <p>通感一体化是多模态感知的重要延伸。无线信号不只承担数据通信，也可以用于人体、设备和环境状态感知。课题组将探索通信链路与感知任务之间的协同设计，在保证通信性能的同时提取有用的环境信息，推动通信系统从信息传输基础设施进一步发展为具备环境理解能力的智能系统。</p>
+        </div>
+      </section>
+
+      <section class="section fade-in-up" id="selected-work">
+        <div class="container research-editorial">
+          <h2 class="research-editorial-heading">Selected Work</h2>
+          <div class="publication-list direction-publications">
+            <article class="publication-item">
+              <span class="publication-number">01</span>
+              <div>
+                <h3>毫米波-WiFi-红外一体化实时采集平台</h3>
+                <p class="publication-meta">Type：实验平台 <span aria-hidden="true">·</span> Direction：多模态感知</p>
+                <p>课题组开发了毫米波、WiFi 与红外的一体化实时采集平台，用于多源感知数据采集、同步观察和算法验证，为人体状态感知、呼吸检测和复杂场景实验提供平台支撑。</p>
+                <figure class="publication-media">
+                  <img src="assets/images/multimodal-realtime-platform.jpg" alt="毫米波-WiFi-红外一体化实时采集平台实验现场" loading="lazy">
+                  <figcaption>毫米波-WiFi-红外一体化实时采集平台</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article class="publication-item">
+              <span class="publication-number">02</span>
+              <div>
+                <h3>AceNet: attention-guided context enhancement for imbalanced action recognition via RF signals</h3>
+                <p class="publication-authors">Authors：Biyun Sheng, Hao Liu, Hui Cai, Yiping Zuo, Jian Zhou, Fu Xiao</p>
+                <p class="publication-meta">Venue：IEEE Transactions on Mobile Computing <span aria-hidden="true">·</span> Year：2026</p>
+                <p>该工作面向射频信号行为识别中的类别不平衡问题，提出注意力引导的上下文增强网络，从特征层面区分相似动作并缓解不平衡带来的决策边界偏差。</p>
+                <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11408084">查看论文</a></p>
+              </div>
+            </article>
+            <article class="publication-item">
+              <span class="publication-number">03</span>
+              <div>
+                <h3>CoSense: Respiratory Detection Based on WIFI CSI and Millimeter-Wave Radar</h3>
+                <p class="publication-authors">Authors：Jiaming Liu, Xiaoxiao Qiao, Zeyuan Wu, Weibei Fan, Yiping Zuo, Xin He</p>
+                <p class="publication-meta">Venue：2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4117-4122 <span aria-hidden="true">·</span> Year：2026</p>
+                <p>该工作提出基于 WiFi CSI 与毫米波雷达联合感知的无接触呼吸检测系统，通过融合两类信号特征提升复杂室内环境下的呼吸检测准确性。</p>
+                <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11581638">查看论文</a></p>
+              </div>
+            </article>
+            <article class="publication-item">
+              <span class="publication-number">04</span>
+              <div>
+                <h3>Adaptive Hybrid Routing for Wi-Fi CSI-Based Indoor Human Activity Recognition Using DTW-KNN and SVM</h3>
+                <p class="publication-authors">Authors：Jiasheng Song, Yiping Zuo, Chen Dai, Weicong Chen, Ning Gao, Xin He, Weibei Fan</p>
+                <p class="publication-meta">Venue：2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4098-4103 <span aria-hidden="true">·</span> Year：2026</p>
+                <p>该工作面向 WiFi CSI 室内人体活动识别，提出结合 DTW-KNN 与 SVM 的自适应混合路由方法，用于提升资源受限场景下的识别鲁棒性。</p>
+                <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11582546">查看论文</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="page-end-navigation" aria-labelledby="related-directions-title"><div class="container page-end-navigation-inner"><p class="page-end-label" id="related-directions-title">其他研究方向</p><div class="page-end-links"><a href="research-ai.html"><span>02 · 通感一体化</span><span aria-hidden="true">→</span></a><a href="research-communication.html"><span>03 · 智能通信</span><span aria-hidden="true">→</span></a></div></div></section>
     </main>
 
     <footer class="site-footer">

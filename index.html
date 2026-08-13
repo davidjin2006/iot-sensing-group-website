@@ -14,31 +14,20 @@
 
     <title>多模态智能通信与感知 | 南京邮电大学计算机学院</title>
     <link rel="icon" href="assets/images/mics-logo.png?v=2" type="image/png">
-    <script>
-      (function () {
-        var params = new URLSearchParams(window.location.search);
-        if (params.get("lang") !== "cn" && !window.location.hash) {
-          window.location.replace("en/index.html");
-        }
-      })();
-    </script>
     <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
   </head>
-  <body class="home-page">
+  <body class="home-page home-page-v8">
     <a class="skip-link" href="#main-content">跳转到主要内容</a>
 
     <header class="site-header" id="top">
       <div class="header-inner container">
-        <a class="site-brand" href="#home" aria-label="多模态智能通信与感知首页">
+                <a class="site-brand" href="#home" aria-label="MICS 首页">
           <span class="brand-mark" aria-hidden="true"><img src="assets/images/mics-logo.png" alt="" width="64" height="64"></span>
           <span class="brand-text">
-            <strong>多模态智能通信与感知</strong>
-            <small>
-              <span>Multimodal Intelligent Communication and Sensing</span>
-              <span>南京邮电大学 · 计算机学院</span>
-            </small>
+            <strong>MICS</strong>
+            <small>多模态智能通信与感知</small>
           </span>
         </a>
 
@@ -49,15 +38,12 @@
           <span aria-hidden="true"></span>
         </button>
 
-        <nav class="primary-nav" id="primary-navigation" aria-label="主要导航">
-          <a href="#about">课题组介绍</a>
-          <a href="#leader">导师介绍</a>
-          <a href="#research">研究方向</a>
-          <a href="#team">团队成员</a>
-          <a href="#publications">代表作</a>
-          <a href="#join">本科生招新</a>
-          <a href="#partners">合作单位</a>
-          <a href="#contact">联系方式</a>
+                <nav class="primary-nav" id="primary-navigation" aria-label="主要导航">
+          <a href="index.html#research">研究方向</a>
+          <a href="platform.html">实验平台</a>
+          <a href="team.html">团队成员</a>
+          <a href="results.html">学术成果</a>
+          <a href="join.html">本科生招新</a>
           <span class="language-switch" aria-label="语言切换"><a href="en/index.html" lang="en">EN</a><span aria-current="true">CN</span></span>
         </nav>
       </div>
@@ -65,170 +51,55 @@
 
     <main id="main-content">
       <section class="hero" id="home" aria-labelledby="hero-title">
-        <canvas class="hero-canvas" id="hero-network" aria-hidden="true"></canvas>
-        
-        <div class="hero-slider">
-          <div class="hero-slide hero-slide-home hero-slide-active">
-            <div class="hero-inner container">
-              <div class="hero-content">
-                <p class="eyebrow">Multimodal Intelligent Communication and Sensing</p>
-                <h1 id="hero-title">多模态智能通信与感知</h1>
-                <p class="hero-tagline">面向智能物联场景，开展多模态感知、通感一体化与智能通信研究</p>
-                <div class="hero-pills" aria-label="课题组重点">
-                  <span>多个研究方向</span>
-                  <span>多源感知平台</span>
-                </div>
-                <div class="hero-actions">
-                  <a class="button button-primary" href="#about">了解课题组</a>
-                  <a class="button button-secondary" href="#research">研究方向</a>
-                </div>
-              </div>
-            </div>
-            <div class="hero-visual hero-visual-a" aria-hidden="true">
-              <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M74 260 C154 110 294 96 446 166" stroke="currentColor" stroke-width="2"/>
-                <path d="M104 302 C200 218 292 212 430 254" stroke="currentColor" stroke-width="1.4"/>
-                <circle cx="120" cy="238" r="38" stroke="currentColor" stroke-width="2"/>
-                <circle cx="268" cy="154" r="62" stroke="currentColor" stroke-width="1.6"/>
-                <circle cx="414" cy="188" r="44" stroke="currentColor" stroke-width="2"/>
-                <circle cx="120" cy="238" r="7" fill="currentColor"/>
-                <circle cx="268" cy="154" r="7" fill="currentColor"/>
-                <circle cx="414" cy="188" r="7" fill="currentColor"/>
-              </svg>
-            </div>
+        <div class="hero-inner container">
+          <div class="hero-content">
+            <p class="hero-kicker">MICS / Multimodal Intelligent Communication and Sensing</p>
+            <h1 id="hero-title"><span class="title-line">多模态智能</span><span class="title-line">通信与感知</span></h1>
+            <p class="hero-tagline">面向智能物联场景，开展多模态感知、通感一体化与智能通信研究。</p>
+            <p class="hero-affiliation">南京邮电大学 <span aria-hidden="true">·</span> 计算机学院</p>
+            <a class="hero-text-link" href="#research">Explore Research <span aria-hidden="true">→</span></a>
           </div>
 
-          <div class="hero-slide hero-slide-platform">
-            <div class="hero-inner container">
-              <div class="hero-content">
-                <p class="eyebrow">Research Infrastructure</p>
-                <h1>多模态的感知平台</h1>
-                <p class="hero-tagline">汇聚多源感知设备与实验环境，支撑通信、感知与智能算法协同研究</p>
-                <div class="hero-pills" aria-label="平台能力">
-                  <span>WiFi CSI / BFI</span>
-                  <span>毫米波雷达</span>
-                  <span>RIS智能超表面</span>
-                </div>
-                <div class="hero-actions">
-                  <a class="button button-primary" href="platform.html">查看详情</a>
+          <div class="hero-research-visual" aria-label="课题组实验平台视觉展示">
+            <svg class="hero-signal-trace" viewBox="0 0 560 320" fill="none" aria-hidden="true">
+              <path d="M58 206 C130 100 226 92 304 158 C362 208 428 198 508 92"/>
+              <path d="M70 240 C154 166 238 170 316 218 C384 260 448 228 500 176"/>
+              <circle cx="58" cy="206" r="4"/><circle cx="304" cy="158" r="4"/><circle cx="508" cy="92" r="4"/>
+            </svg>
+
+            <figure class="hero-platform-frame">
+              <div class="hero-device-viewport" data-device-showcase>
+                <div class="hero-device-track" data-device-track>
+                  <div class="hero-device-slide" data-device-name="BFI Capture Platform" data-device-sub="Wireless Feedback Platform" aria-hidden="true">
+                    <img src="assets/images/platform/bfi-capture-r7800-r9000.jpeg" alt="R7800 与 R9000 BFI 采集平台" width="1200" height="900" draggable="false">
+                  </div>
+                  <div class="hero-device-slide is-active" data-device-name="TurtleBot 4" data-device-sub="Robotic Sensing Platform">
+                    <img src="assets/images/platform/turtlebot4-platform.jpeg" alt="TurtleBot 4 实验平台" width="1200" height="900" draggable="false">
+                  </div>
+                  <div class="hero-device-slide" data-device-name="Intel 5300 WiFi CSI" data-device-sub="WiFi CSI Platform" aria-hidden="true">
+                    <img src="assets/images/platform/wifi-csi-intel5300.png" alt="Intel 5300 WiFi CSI 实验平台" width="1200" height="900" draggable="false">
+                  </div>
+                  <div class="hero-device-slide" data-device-name="BFI Capture Platform" data-device-sub="Wireless Feedback Platform" aria-hidden="true">
+                    <img src="assets/images/platform/bfi-capture-r7800-r9000.jpeg" alt="R7800 与 R9000 BFI 采集平台" width="1200" height="900" draggable="false">
+                  </div>
+                  <div class="hero-device-slide" data-device-name="TurtleBot 4" data-device-sub="Robotic Sensing Platform" aria-hidden="true">
+                    <img src="assets/images/platform/turtlebot4-platform.jpeg" alt="TurtleBot 4 实验平台" width="1200" height="900" draggable="false">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="hero-visual hero-visual-b" aria-hidden="true">
-              <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="96" y="98" width="112" height="112" rx="18" stroke="currentColor" stroke-width="2"/>
-                <rect x="292" y="146" width="132" height="98" rx="18" stroke="currentColor" stroke-width="2"/>
-                <path d="M208 154 H260 C276 154 276 194 292 194" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M152 210 C198 294 306 314 390 244" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="152" cy="154" r="9" fill="currentColor"/>
-                <circle cx="358" cy="194" r="9" fill="currentColor"/>
-                <circle cx="256" cy="292" r="7" fill="currentColor"/>
-              </svg>
-            </div>
+              <figcaption class="hero-device-caption" data-device-caption>
+                <div class="hero-device-caption-text">
+                  <span data-device-caption-index>01</span><span aria-hidden="true"> / </span><span data-device-caption-name>TurtleBot 4</span>
+                  <span class="hero-device-caption-sub" data-device-caption-sub>Robotic Sensing Platform</span>
+                </div>
+                <div class="hero-device-controls">
+                  <button type="button" data-device-prev aria-label="上一个设备"><span aria-hidden="true">←</span></button>
+                  <span class="hero-device-index" data-device-index aria-live="polite">01 / 03</span>
+                  <button type="button" data-device-next aria-label="下一个设备"><span aria-hidden="true">→</span></button>
+                </div>
+              </figcaption>
+            </figure>
           </div>
-
-          <div class="hero-slide hero-slide-results">
-            <div class="hero-inner container">
-              <div class="hero-content">
-                <p class="eyebrow">Representative Works</p>
-                <h1>代表作</h1>
-                <p class="hero-tagline">集中展示多模态智能通信与感知方向的代表性论文成果</p>
-                <div class="hero-pills" aria-label="成果摘要">
-                  <span>代表作</span>
-                </div>
-                <div class="hero-actions">
-                  <a class="button button-primary" href="https://scholar.google.co.jp/citations?user=N1wGoKkAAAAJ&amp;hl=en&amp;oi=sra" target="_blank" rel="noopener noreferrer">查看详情</a>
-                </div>
-              </div>
-            </div>
-            <div class="hero-visual hero-visual-c" aria-hidden="true">
-              <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M94 268 H426" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M120 246 L184 188 L244 220 L316 136 L406 176" stroke="currentColor" stroke-width="2.2"/>
-                <rect x="112" y="106" width="104" height="134" rx="14" stroke="currentColor" stroke-width="1.8"/>
-                <rect x="260" y="88" width="142" height="164" rx="16" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M292 124 H370 M292 154 H352 M292 184 H382" stroke="currentColor" stroke-width="1.4"/>
-                <circle cx="184" cy="188" r="7" fill="currentColor"/>
-                <circle cx="316" cy="136" r="7" fill="currentColor"/>
-              </svg>
-            </div>
-          </div>
-
-          <div class="hero-slide">
-            <div class="hero-inner container">
-              <div class="hero-content">
-                <p class="eyebrow">Research Network</p>
-                <h1>多个合作伙伴</h1>
-                <p class="hero-tagline">与校内外科研与应用单位协同推进多模态智能通信与感知研究</p>
-                <div class="hero-pills" aria-label="合作方向">
-                  <span>FutureComm Lab</span>
-                  <span>江苏省人民医院</span>
-                </div>
-                <div class="hero-actions">
-                  <a class="button button-primary" href="#partners">查看详情</a>
-                </div>
-              </div>
-            </div>
-            <div class="hero-visual hero-visual-d" aria-hidden="true">
-              <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M150 118 L282 82 L402 162 L350 284 L178 286 L96 194 Z" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M150 118 L350 284 M402 162 L178 286 M96 194 L282 82" stroke="currentColor" stroke-width="1.2"/>
-                <circle cx="150" cy="118" r="34" stroke="currentColor" stroke-width="2"/>
-                <circle cx="282" cy="82" r="26" stroke="currentColor" stroke-width="2"/>
-                <circle cx="402" cy="162" r="36" stroke="currentColor" stroke-width="2"/>
-                <circle cx="350" cy="284" r="30" stroke="currentColor" stroke-width="2"/>
-                <circle cx="178" cy="286" r="24" stroke="currentColor" stroke-width="2"/>
-                <circle cx="96" cy="194" r="28" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </div>
-          </div>
-
-          <div class="hero-slide">
-            <div class="hero-inner container">
-              <div class="hero-content">
-                <p class="eyebrow">Join Our Team</p>
-                <h1>诚邀新同学加入</h1>
-                <p class="hero-tagline">加入我们，探索多模态智能通信与感知前沿，共筑科研梦想</p>
-                <div class="hero-pills" aria-label="招新方向">
-                  <span>科研指导</span>
-                  <span>工程教导</span>
-                  <span>自主实践</span>
-                </div>
-                <div class="hero-actions">
-                  <a class="button button-primary" href="#join">查看招新信息</a>
-                </div>
-              </div>
-            </div>
-            <div class="hero-visual hero-visual-e" aria-hidden="true">
-              <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M108 276 C166 196 230 156 314 140 C354 132 390 112 426 72" stroke="currentColor" stroke-width="2.2"/>
-                <path d="M120 304 C208 288 298 240 402 184" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="150" cy="228" r="34" stroke="currentColor" stroke-width="2"/>
-                <circle cx="258" cy="164" r="42" stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="372" cy="116" r="32" stroke="currentColor" stroke-width="2"/>
-                <path d="M134 228 H166 M258 142 V186 M350 116 H394" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <button class="hero-nav hero-nav-prev" aria-label="上一张幻灯片">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M20 8 L12 16 L20 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <button class="hero-nav hero-nav-next" aria-label="下一张幻灯片">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M12 8 L20 16 L12 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-
-        <div class="hero-indicators">
-          <button class="hero-indicator hero-indicator-active" aria-label="幻灯片 1"></button>
-          <button class="hero-indicator" aria-label="幻灯片 2"></button>
-          <button class="hero-indicator" aria-label="幻灯片 3"></button>
-          <button class="hero-indicator" aria-label="幻灯片 4"></button>
-          <button class="hero-indicator" aria-label="幻灯片 5"></button>
         </div>
       </section>
 
@@ -237,53 +108,54 @@
           <header class="overview-header">
             <p class="section-number">Overview</p>
             <h2 id="overview-title">研究入口</h2>
-            <p>围绕多模态感知、通感一体化与智能通信组织平台、成果和团队信息。</p>
           </header>
           <div class="overview-grid">
             <a class="overview-card overview-card-primary" href="#research">
               <span>Research</span>
-              <strong>多个研究方向</strong>
-              <p>多模态感知、通感一体化、智能通信。</p>
+              <strong>研究方向</strong>
+              <span class="overview-arrow" aria-hidden="true">→</span>
             </a>
             <a class="overview-card" href="platform.html">
               <span>Platform</span>
-              <strong>多源采集平台</strong>
-              <p>支撑 WiFi、毫米波雷达与 RIS 智能超表面实验。</p>
+              <strong>实验平台</strong>
+              <span class="overview-arrow" aria-hidden="true">→</span>
             </a>
-            <a class="overview-card" href="#publications">
+            <a class="overview-card" href="results.html">
               <span>Works</span>
-              <strong>代表作</strong>
-              <p>集中展示课题组代表性论文成果。</p>
+              <strong>代表成果</strong>
+              <span class="overview-arrow" aria-hidden="true">→</span>
             </a>
-            <a class="overview-card" href="#team">
-              <span>Team</span>
-              <strong>导师与学生团队</strong>
-              <p>研究生、本科生共同参与科研训练。</p>
+            <a class="overview-card" href="team.html">
+              <span>People</span>
+              <strong>团队成员</strong>
+              <span class="overview-arrow" aria-hidden="true">→</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section class="block-panel block-panel-dark fade-in-up" id="about" aria-labelledby="about-title">
+      <section class="block-panel fade-in-up" id="about" aria-labelledby="about-title">
         <div class="block-panel-inner container">
           <div class="block-panel-text">
             <p class="block-eyebrow">01 / About the Group</p>
             <h2 id="about-title" class="block-title">课题组<br>介绍</h2>
-            <p class="block-lead">面向智能物联场景，探索多模态感知与智能通信融合技术。</p>
-            <p class="block-note">多模态智能通信与感知课题组隶属于南京邮电大学计算机学院，由左益平老师指导。课题组围绕多模态感知、通感一体化与智能通信等方向开展研究，重视科研平台建设、跨学科合作与学生科研训练。</p>
+            <p class="block-note">多模态智能通信与感知课题组隶属于南京邮电大学计算机学院，由左益平老师指导，围绕多模态感知、通感一体化与智能通信开展研究。</p>
           </div>
           <div class="block-panel-visual" aria-hidden="true">
             <svg viewBox="0 0 400 400" fill="none">
-              <circle cx="200" cy="200" r="160" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-              <circle cx="200" cy="200" r="110" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-              <circle cx="200" cy="80" r="6" fill="#2563eb"/>
-              <circle cx="320" cy="200" r="6" fill="#06b6d4"/>
-              <circle cx="200" cy="320" r="6" fill="#8b5cf6"/>
-              <circle cx="80" cy="200" r="6" fill="#2563eb"/>
-              <line x1="200" y1="80" x2="320" y2="200" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-              <line x1="320" y1="200" x2="200" y2="320" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-              <line x1="200" y1="320" x2="80" y2="200" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-              <line x1="80" y1="200" x2="200" y2="80" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+              <circle cx="205" cy="198" r="158" stroke="rgba(36,87,127,0.20)" stroke-width="1.5"/>
+              <circle cx="205" cy="198" r="112" stroke="rgba(36,87,127,0.26)" stroke-width="1.5" stroke-dasharray="6 9"/>
+              <circle cx="205" cy="198" r="52" fill="rgba(255,255,255,0.28)" stroke="#24577f" stroke-width="2"/>
+              <path d="M205 40 L314 95 L360 218 L286 332 L136 346 L49 237 L82 105 Z" stroke="rgba(36,87,127,0.34)" stroke-width="1.5"/>
+              <path d="M82 105 L205 198 L314 95 M49 237 L205 198 L286 332 M205 40 L205 198 L360 218 M136 346 L205 198" stroke="rgba(36,87,127,0.42)" stroke-width="1.5"/>
+              <circle cx="205" cy="198" r="9" fill="#173d5c"/>
+              <circle cx="205" cy="40" r="7" fill="#356f9f"/>
+              <circle cx="314" cy="95" r="6" fill="#5989ad"/>
+              <circle cx="360" cy="218" r="8" fill="#24577f"/>
+              <circle cx="286" cy="332" r="6" fill="#6e98b7"/>
+              <circle cx="136" cy="346" r="7" fill="#356f9f"/>
+              <circle cx="49" cy="237" r="6" fill="#6e98b7"/>
+              <circle cx="82" cy="105" r="8" fill="#24577f"/>
             </svg>
           </div>
         </div>
@@ -311,7 +183,7 @@
               <dl class="profile-meta">
                 <div>
                   <dt>个人简介</dt>
-                  <dd>左益平，南邮计算机学院讲师、硕士生导师，东南大学博士。长期担任期刊IEEE TWC、TVT、TCOM、TMC等期刊的审稿人，主持国家自然科学基金青年项目与江苏省高等学校基础科学（自然科学）面上项目等科研项目，参与国家自然科学基金专项项目。</dd>
+                  <dd>左益平，南京邮电大学计算机学院讲师、硕士生导师，东南大学博士。主持国家自然科学基金青年项目等科研项目。</dd>
                 </div>
                 <div>
                   <dt>研究兴趣</dt>
@@ -331,62 +203,100 @@
         </div>
       </section>
 
-      <section class="block-panel block-panel-dark fade-in-up" id="research" aria-labelledby="research-title">
+      <section class="research-showcase fade-in-up" id="research" aria-labelledby="research-title">
         <div class="container">
-          <header class="block-section-header">
-            <p class="block-eyebrow">03 / Research Directions</p>
-            <h2 id="research-title" class="block-title">研究方向</h2>
-            <p class="block-desc">点击卡片了解各方向详情、团队成员与学术成果。</p>
+          <header class="research-section-header">
+            <p class="research-eyebrow">03 / Research Directions</p>
+            <div><h2 id="research-title">研究方向</h2></div>
           </header>
 
-          <div class="research-grid">
-            <a href="research-multimodal.html" class="research-card">
-              <div class="research-card-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                  <rect x="12" y="12" width="24" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
-                  <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
-                  <circle cx="36" cy="20" r="2.5" fill="currentColor"/>
-                  <path d="M18 32 Q28 36 38 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <div class="research-features">
+            <a href="research-multimodal.html" class="research-feature">
+              <div class="research-feature-copy">
+                <span class="research-index">01</span>
+                <p class="research-label">Multimodal Sensing</p>
+                <h3>多模态感知</h3>
+                <p class="research-introduction">融合 WiFi、毫米波雷达、视觉等多源信号，面向人体定位、生理与行为感知、姿态估计和环境感知构建协同感知能力。</p>
+                <dl>
+                  <div><dt>主要负责人</dt><dd>张栩闻</dd></div>
+                </dl>
+                <span class="research-link">探索研究方向 <span aria-hidden="true">→</span></span>
+              </div>
+              <div class="research-feature-visual" aria-hidden="true">
+                <svg viewBox="0 0 600 360" fill="none">
+                  <circle cx="236" cy="180" r="86"/><circle cx="236" cy="180" r="142"/>
+                  <path d="M92 228 C176 82 312 82 470 190"/>
+                  <path d="M128 278 C244 192 364 202 510 258"/>
+                  <circle class="node" cx="92" cy="228" r="7"/><circle class="node" cx="236" cy="180" r="9"/><circle class="node" cx="470" cy="190" r="7"/>
                 </svg>
               </div>
-              <span class="research-card-number">01</span>
-              <h3>多模态感知</h3>
-              <p class="research-card-lead">主要负责人：<strong>张栩闻</strong></p>
-              <p class="research-card-contact">Email: <span>barcaxu@outlook.com</span></p>
-              <span class="research-card-link">了解更多 →</span>
             </a>
-            <a href="research-ai.html" class="research-card">
-              <div class="research-card-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                  <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2.5"/>
-                  <path d="M18 24 L22 28 L30 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="24" cy="12" r="2" fill="currentColor"/>
-                  <circle cx="12" cy="24" r="2" fill="currentColor"/>
-                  <circle cx="36" cy="24" r="2" fill="currentColor"/>
+
+            <a href="research-ai.html" class="research-feature research-feature-reverse">
+              <div class="research-feature-copy">
+                <span class="research-index">02</span>
+                <p class="research-label">Integrated Sensing and Communication</p>
+                <h3>通感一体化</h3>
+                <p class="research-introduction">研究通信与感知在频谱、波形、硬件架构上的深度协同，实现同一信号同时完成环境感知与数据传输，提高资源效率。</p>
+                <dl>
+                  <div><dt>主要负责人</dt><dd>金楚惟</dd></div>
+                </dl>
+                <span class="research-link">探索研究方向 <span aria-hidden="true">→</span></span>
+              </div>
+              <div class="research-feature-visual" aria-hidden="true">
+                <svg viewBox="0 0 600 360" fill="none">
+                  <circle cx="116" cy="180" r="42"/><circle cx="484" cy="180" r="42"/>
+                  <path d="M160 166 C258 90 342 90 440 166"/>
+                  <path class="dash" d="M440 194 C342 270 258 270 160 194"/>
+                  <path d="M254 180 H346"/>
+                  <rect class="node" x="286" y="146" width="28" height="68" transform="rotate(45 300 180)"/>
                 </svg>
               </div>
-              <span class="research-card-number">02</span>
-              <h3>通感一体化</h3>
-              <p class="research-card-lead">主要负责人：<strong>金楚惟</strong></p>
-              <p class="research-card-contact">Email: <span>b24013021@njupt.edu.cn</span></p>
-              <span class="research-card-link">了解更多 →</span>
             </a>
-            <a href="research-communication.html" class="research-card">
-              <div class="research-card-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                  <path d="M8 24 Q16 16 24 24 Q32 32 40 24" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                  <path d="M8 24 Q16 32 24 24 Q32 16 40 24" stroke="currentColor" stroke-width="2.5" fill="none" opacity="0.6"/>
-                  <circle cx="8" cy="24" r="2.5" fill="currentColor"/>
-                  <circle cx="40" cy="24" r="2.5" fill="currentColor"/>
-                  <circle cx="24" cy="24" r="3" fill="currentColor"/>
+
+            <a href="research-communication.html" class="research-feature">
+              <div class="research-feature-copy">
+                <span class="research-index">03</span>
+                <p class="research-label">Intelligent Communication</p>
+                <h3>智能通信</h3>
+                <p class="research-introduction">结合边缘计算与人工智能技术，研究信道估计、资源分配、网络优化中的智能化方法，提升通信系统在复杂环境中的适应能力。</p>
+                <dl>
+                  <div><dt>主要负责人</dt><dd>陆梓健</dd></div>
+                </dl>
+                <span class="research-link">探索研究方向 <span aria-hidden="true">→</span></span>
+              </div>
+              <div class="research-feature-visual" aria-hidden="true">
+                <svg viewBox="0 0 600 360" fill="none">
+                  <path d="M72 184 C128 92 184 92 240 184 C296 276 352 276 408 184 C450 116 486 104 532 146"/>
+                  <path d="M72 226 C128 134 184 134 240 226 C296 318 352 318 408 226 C450 158 486 146 532 188"/>
+                  <path class="dash" d="M72 142 C128 50 184 50 240 142 C296 234 352 234 408 142 C450 74 486 62 532 104"/>
+                  <circle class="node" cx="72" cy="184" r="7"/><circle class="node" cx="240" cy="184" r="7"/><circle class="node" cx="408" cy="184" r="7"/><circle class="node" cx="532" cy="146" r="7"/>
                 </svg>
               </div>
-              <span class="research-card-number">03</span>
-              <h3>智能通信</h3>
-              <p class="research-card-lead">主要负责人：<strong>陆梓健</strong></p>
-              <p class="research-card-contact">Email: <span>18818732360@163.com</span></p>
-              <span class="research-card-link">了解更多 →</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="platform-snapshot fade-in-up" id="platform-preview" aria-labelledby="platform-preview-title">
+        <div class="container platform-snapshot-grid">
+          <div class="platform-snapshot-heading">
+            <p class="section-number">04 / Platform</p>
+            <h2 id="platform-preview-title">实验平台</h2>
+            <p class="platform-snapshot-tags">WiFi CSI · BFI · mmWave · Mobile Robotics</p>
+          </div>
+          <div class="platform-snapshot-media">
+            <figure class="platform-snapshot-main">
+              <img src="assets/images/platform/turtlebot4-platform.jpeg" alt="TurtleBot4 移动机器人平台" width="1196" height="920">
+            </figure>
+            <div class="platform-snapshot-strip">
+              <img src="assets/images/platform/wifi-csi-intel5300.png" alt="Intel 5300 WiFi CSI 采集设备" width="1274" height="638">
+              <img src="assets/images/platform/bfi-capture-r7800-r9000.jpeg" alt="BFI 采集平台设备" width="3301" height="2476">
+            </div>
+          </div>
+          <div class="platform-snapshot-copy">
+            <p>平台围绕 WiFi CSI、BFI 波束成形反馈信息、毫米波雷达与移动机器人系统，支撑从生理状态、动作行为到动态多传感器融合的实验验证。</p>
+            <a class="button button-secondary" href="platform.html">查看实验平台 →</a>
           </div>
         </div>
       </section>
@@ -394,9 +304,8 @@
       <section class="section fade-in-up" id="team" aria-labelledby="team-title">
         <div class="container">
           <div class="section-heading section-heading-centered">
-            <p class="section-number">04 / Team Members</p>
+            <p class="section-number">05 / Team Members</p>
             <h2 id="team-title">团队成员</h2>
-            <p>首页展示部分课题组成员，完整名单可进入团队成员页面查看。</p>
           </div>
 
           <div class="member-card-grid member-card-grid-featured" aria-label="部分团队成员">
@@ -467,7 +376,7 @@
       <section class="section section-tinted fade-in-up" id="publications" aria-labelledby="publications-title">
         <div class="container section-grid">
           <div class="section-heading">
-            <p class="section-number">05 / Publications</p>
+            <p class="section-number">06 / Publications</p>
             <h2 id="publications-title">代表作</h2>
           </div>
           <div class="publication-list">
@@ -477,7 +386,6 @@
                 <h3>A survey of blockchain and artificial intelligence for 6G wireless communications</h3>
                 <p class="publication-authors">Authors：Yiping Zuo, Jiajia Guo, Ning Gao, Yongxu Zhu, Shi Jin, Xiao Li</p>
                 <p class="publication-meta">Venue：IEEE Communications Surveys &amp; Tutorials, 25(4), 2494-2528 <span aria-hidden="true">·</span> Year：2023</p>
-                <p>该综述系统梳理区块链与人工智能在6G无线通信中的融合应用，围绕资源管理、网络架构、隐私安全、效率与成本等关键挑战总结技术进展。</p>
                 <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/10251433">查看论文</a></p>
               </div>
             </article>
@@ -487,7 +395,6 @@
                 <h3>Contractskill: Repairable contract-based skills for multimodal web agents</h3>
                 <p class="publication-authors">Authors：Zijian Lu, Yiping Zuo, Yupeng Nie, Xin He, Weibei Fan, Lianyong Qi, Shi Jin</p>
                 <p class="publication-meta">Venue：arXiv preprint arXiv:2603.20340 <span aria-hidden="true">·</span> Year：2026</p>
-                <p>该工作提出面向多模态网页智能体的 ContractSkill 框架，将草稿技能转化为可执行、可验证、可局部修复的结构化技能，提高网页任务中的稳定性与可迁移性。</p>
                 <p class="publication-link"><a href="https://arxiv.org/abs/2603.20340">查看论文</a></p>
               </div>
             </article>
@@ -497,26 +404,10 @@
                 <h3>MulSense: An Enhanced Multi-Person Intrusion Detection System Using Commodity WiFi Devices</h3>
                 <p class="publication-authors">Authors：Xiaoying Yang, Zishen Xu, Yiping Zuo, Weicong Chen, Jiajia Guo, Chen Dai</p>
                 <p class="publication-meta">Venue：2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 4202-4207 <span aria-hidden="true">·</span> Year：2026</p>
-                <p>该工作面向复杂多人场景下的WiFi CSI入侵检测，利用多天线收发几何和增强CSI比值模型提升多人入侵识别的准确性与鲁棒性。</p>
                 <p class="publication-link"><a href="https://ieeexplore.ieee.org/abstract/document/11582617">查看论文</a></p>
               </div>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section join-section fade-in-up" id="join" aria-labelledby="join-title">
-        <div class="container">
-          <div class="join-intro section-grid">
-            <div class="section-heading">
-              <p class="section-number">06 / Join Us</p>
-              <h2 id="join-title">本科生招新</h2>
-            </div>
-            <div class="section-content">
-              <p class="lead">待补充</p>
-              <p class="content-note">课题组常年招募对多模态智能通信与感知技术感兴趣的本科生，具体研究题目与申请要求请查看详细招新页面。</p>
-              <a class="button button-primary" href="join.html" style="margin-top: 24px;">查看详细招新信息 →</a>
-            </div>
+            <div class="section-more"><a class="button button-secondary" href="results.html">查看全部成果 →</a></div>
           </div>
         </div>
       </section>
@@ -546,10 +437,26 @@
         </div>
       </section>
 
+      <section class="section join-section fade-in-up" id="join" aria-labelledby="join-title">
+        <div class="container">
+          <div class="join-intro section-grid">
+            <div class="section-heading">
+              <p class="section-number">08 / Join Us</p>
+              <h2 id="join-title">本科生招新</h2>
+            </div>
+            <div class="section-content">
+              <p class="lead">待补充</p>
+              <p class="content-note">课题组常年招募对多模态智能通信与感知技术感兴趣的本科生，具体研究题目与申请要求请查看详细招新页面。</p>
+              <a class="button button-primary" href="join.html">查看详细招新信息 →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section contact-section fade-in-up" id="contact" aria-labelledby="contact-title">
         <div class="container section-grid">
           <div class="section-heading">
-            <p class="section-number">08 / Contact</p>
+            <p class="section-number">09 / Contact</p>
             <h2 id="contact-title">联系方式</h2>
           </div>
           <address class="contact-details">

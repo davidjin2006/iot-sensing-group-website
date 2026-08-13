@@ -10,22 +10,26 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/main.js" defer></script>
   </head>
-  <body>
+  <body class="page-shell page-platform">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header" id="top">
       <div class="header-inner container">
-        <a class="site-brand" href="index.html" aria-label="Multimodal Intelligent Communication and Sensing home">
-          <span class="brand-mark" aria-hidden="true"><img src="../assets/images/mics-logo.png" alt=""></span>
+                <a class="site-brand" href="index.html" aria-label="MICS home">
+          <span class="brand-mark" aria-hidden="true"><img src="../assets/images/mics-logo.png" alt="" width="64" height="64"></span>
           <span class="brand-text">
-            <strong>Multimodal Intelligent Communication and Sensing</strong>
-            <small><span>Nanjing University of Posts and Telecommunications</span><span>School of Computer Science</span></small>
+            <strong>MICS</strong>
+            <small>Multimodal Intelligent Communication and Sensing</small>
           </span>
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
           <span class="sr-only">Open navigation menu</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
         </button>
-        <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
-          <a href="index.html#about">About</a><a href="index.html#leader">Supervisor</a><a href="index.html#research">Research</a><a href="team.html">Team</a><a href="index.html#publications">Publications</a><a href="index.html#join">Join Us</a><a href="index.html#partners">Partners</a><a href="index.html#contact">Contact</a>
+                <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="index.html#research">Research</a>
+          <a href="platform.html">Platform</a>
+          <a href="team.html">People</a>
+          <a href="results.html">Publications</a>
+          <a href="join.html">Join</a>
           <span class="language-switch" aria-label="Language switch"><span aria-current="true">EN</span><a href="../platform.html" lang="zh-CN">CN</a></span>
         </nav>
       </div>
@@ -54,8 +58,9 @@
           </figure>
         </div>
       </section>
+      <nav class="subpage-index" aria-label="On this page"><div class="container subpage-index-inner"><span>On this page</span><div class="subpage-index-links"><a href="#platform-matrix">Matrix</a><a href="#wifi-csi">WiFi CSI</a><a href="#bfi">BFI</a><a href="#mmwave">mmWave</a><a href="#mobile">Mobile</a><a href="#applications">Applications</a></div></div></nav>
 
-      <section class="section fade-in-up">
+      <section class="section fade-in-up" id="platform-matrix">
         <div class="container">
           <div class="section-heading section-heading-wide">
             <div>
@@ -101,8 +106,8 @@
         </div>
       </section>
 
-      <section class="section section-tinted fade-in-up">
-        <div class="container platform-feature">
+      <section class="section platform-feature-section platform-feature-section-right" id="wifi-csi">
+        <div class="container platform-feature platform-reveal">
           <figure class="platform-feature-media">
             <img src="../assets/images/platform/wifi-csi-intel5300.png" alt="Intel 5300 WiFi CSI platform" width="1274" height="638">
           </figure>
@@ -119,8 +124,8 @@
         </div>
       </section>
 
-      <section class="section fade-in-up">
-        <div class="container platform-feature platform-feature-reverse">
+      <section class="section platform-feature-section platform-feature-section-left" id="bfi">
+        <div class="container platform-feature platform-feature-reverse platform-reveal">
           <figure class="platform-feature-media">
             <img src="../assets/images/platform/bfi-capture-r7800-r9000.jpeg" alt="Routers, sniffer, and receiver laptop used for BFI acquisition" width="3301" height="2476">
           </figure>
@@ -151,8 +156,8 @@
         </div>
       </section>
 
-      <section class="section section-tinted fade-in-up">
-        <div class="container platform-feature">
+      <section class="section platform-feature-section platform-feature-section-right" id="mmwave">
+        <div class="container platform-feature platform-reveal">
           <figure class="platform-feature-media platform-feature-media-portrait">
             <img src="../assets/images/platform/mmwave-awr1843.png" alt="TI AWR1843 millimeter-wave radar acquisition device" width="224" height="168">
           </figure>
@@ -169,8 +174,8 @@
         </div>
       </section>
 
-      <section class="section fade-in-up">
-        <div class="container platform-feature platform-feature-reverse">
+      <section class="section platform-feature-section platform-feature-section-left" id="mobile">
+        <div class="container platform-feature platform-feature-reverse platform-reveal">
           <figure class="platform-feature-media platform-feature-media-portrait">
             <img src="../assets/images/platform/turtlebot4-platform.jpeg" alt="TurtleBot4 mobile robot platform photo" width="1196" height="920">
           </figure>
@@ -187,7 +192,7 @@
         </div>
       </section>
 
-      <section class="section section-tinted fade-in-up">
+      <section class="section fade-in-up" id="applications">
         <div class="container">
           <div class="section-heading section-heading-wide">
             <div>
@@ -204,6 +209,7 @@
           </div>
         </div>
       </section>
+      <section class="page-end-navigation" aria-labelledby="platform-next-title"><div class="container page-end-navigation-inner"><p class="page-end-label" id="platform-next-title">Continue exploring</p><div class="page-end-links"><a href="index.html#research"><span>Research directions</span><span aria-hidden="true">→</span></a><a href="results.html"><span>Research results</span><span aria-hidden="true">→</span></a></div></div></section>
     </main>
 
     <footer class="site-footer"><div class="container footer-inner"><p><strong>Multimodal Intelligent Communication and Sensing</strong><br>NJUPT · School of Computer Science</p><p>© <span id="current-year">2026</span> Multimodal Intelligent Communication and Sensing</p></div></footer>
